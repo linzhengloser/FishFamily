@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <include
+            layout="@layout/common_titile_bar"
+            />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="330px"
+                android:background="@color/transparency"
+                android:hint="晒一晒你的爱鱼吧"
+                android:gravity="top"
+                android:textSize="30px"
+                android:textColor="@color/black"
+                android:textColorHint="#999999"
+                android:padding="30px"/>
+
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_publish_post"
+                android:layout_width="match_parent"
+                android:layout_height="176px"
+                android:paddingLeft="30px"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#aaaaaa"
+                android:layout_marginTop="20px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="98px"
+                android:gravity="center_vertical"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+
+            <ImageView
+                    android:layout_width="22px"
+                    android:layout_height="30px"
+                    android:src="@drawable/main_publish_post_location"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#999999"
+                    android:layout_marginLeft="8px"
+                    android:text="湖北省武汉市东西湖区"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+            <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="25px"
+                    android:src="@drawable/common_arrows"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

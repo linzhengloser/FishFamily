@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="248px"
+              android:background="@color/white"
+              android:paddingLeft="30px"
+              android:paddingRight="30px"
+              android:orientation="horizontal"
+              android:gravity="center_vertical">
+
+
+    <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:src="@drawable/common_unselected"/>
+
+    <ImageView
+            android:layout_width="184px"
+            android:layout_height="184px"
+            android:layout_marginLeft="20px"
+            android:src="@drawable/default_avatar"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="184px"
+            android:layout_marginLeft="20px"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32px"
+                android:lines="2"
+                android:textColor="@color/black"
+                android:text="提供PSD文件解析与Sketch插件支持，自动识别各图层尺"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="32px"
+                    android:textColor="#fa0f41"
+                    android:text="¥23333.00"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="28px"
+                    android:textColor="#999999"
+                    android:text="x2333"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

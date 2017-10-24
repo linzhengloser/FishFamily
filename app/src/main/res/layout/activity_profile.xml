@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#fafafa">
+
+    <include layout="@layout/common_titile_bar"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="30px"
+            android:background="#dddddd"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="136px"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+        <ImageView
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:src="@drawable/default_avatar"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="43px"
+                android:textSize="30px"
+                android:textColor="@color/black"
+                android:text="修改头像"
+                />
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+
+        <ImageView
+                android:layout_width="16px"
+                android:layout_height="25px"
+                android:src="@drawable/common_arrows"/>
+
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dddddd"/>
+
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="30px"
+            android:background="#dddddd"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="94px"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="#999999"
+                    android:text="背景"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50px"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="修改背景图片"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+            <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="25px"
+                    android:src="@drawable/common_arrows"/>
+
+
+        </LinearLayout>
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#dddddd"/>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="94px"
+                android:paddingLeft="30px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="#999999"
+                    android:text="昵称"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50px"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="大佬的昵称"/>
+
+
+        </LinearLayout>
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#dddddd"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="94px"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="#999999"
+                    android:text="性别"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50px"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="男"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+            <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="25px"
+                    android:src="@drawable/common_arrows"/>
+
+
+        </LinearLayout>
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#dddddd"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="94px"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="#999999"
+                    android:text="地区"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50px"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="湖北省武汉市"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+            <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="25px"
+                    android:src="@drawable/common_arrows"/>
+
+
+        </LinearLayout>
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#dddddd"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                android:paddingTop="33px"
+                android:paddingBottom="33px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="#999999"
+                    android:text="简介"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50px"
+                    android:maxWidth="510px"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="天降大任于斯人也,必先苦其心志、劳其筋骨、饿其体肤、空乏其身、增益其所不能"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+            <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="25px"
+                    android:src="@drawable/common_arrows"/>
+
+
+        </LinearLayout>
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#dddddd"/>
+
+        <LinearLayout
+                android:id="@+id/ll_tag"
+                android:layout_width="match_parent"
+                android:layout_height="94px"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="#999999"
+                    android:text="标签"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50px"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="准备养鱼,鲨鱼"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+            <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="25px"
+                    android:src="@drawable/common_arrows"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dddddd"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="30px"
+            android:background="#dddddd"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="94px"
+                android:paddingLeft="30px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="#999999"
+                    android:text="鱼豆"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50px"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="23333"/>
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#dddddd"/>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="94px"
+                android:paddingLeft="30px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="#999999"
+                    android:text="等级"/>
+
+            <ImageView
+                    android:layout_width="77px"
+                    android:layout_height="32px"
+                    android:layout_marginLeft="50px"
+                    android:src="@drawable/mine_level_six"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dddddd"/>
+
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="25px"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+
+        <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="366px"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="44px"
+                android:text="龙鱼手速现场"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36px"
+                android:paddingLeft="30px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24px"
+                    android:textColor="#999999"
+                    android:drawableLeft="@drawable/main_live_look_number"
+                    android:drawablePadding="6dp"
+                    android:text="2.33万"/>
+
+            <TextView
+                    android:layout_width="176px"
+                    android:layout_height="52px"
+                    android:layout_marginLeft="28px"
+                    android:gravity="center"
+                    android:background="@drawable/shape_main_live_discussion"
+                    android:text="参与讨论"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+            android:layout_width="70px"
+            android:layout_height="70px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="330px"
+            app:layout_auto_baseheight="width"
+            android:src="@drawable/default_avatar"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="111px"
+            android:layout_marginTop="332px"
+            android:text="大佬"/>
+
+</FrameLayout>

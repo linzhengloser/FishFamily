@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="30px"
+              android:paddingRight="30px"
+              android:paddingTop="26px"
+              android:orientation="vertical"
+              android:background="@color/white">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36px"
+                android:textColor="@color/black"
+                android:text="大佬"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28px"
+                android:textSize="26px"
+                android:textColor="@color/black"
+                android:text="13147190198"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12px"
+            android:text="湖北省武汉市东西湖区美联奥林匹克花园"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="24px"
+            android:background="#dddddd"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="18px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+        <ImageView
+                android:layout_width="44px"
+                android:layout_height="44px"
+                app:layout_auto_baseheight="width"
+                android:src="@drawable/common_unselected"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15px"
+                android:textSize="34px"
+                android:textColor="#999999"
+                android:text="设为默认地址"/>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="34px"
+                android:drawablePadding="6dp"
+                android:drawableLeft="@drawable/shopping_address_edit"
+                android:textColor="#999999"
+                android:text="编辑"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36px"
+                android:textSize="34px"
+                android:drawablePadding="6dp"
+                android:drawableLeft="@drawable/shopping_address_delete"
+                android:textColor="#999999"
+                android:text="删除"/>
+
+    </LinearLayout>
+
+</LinearLayout>

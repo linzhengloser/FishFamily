@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:background="@color/white"
+              android:layout_height="118px"
+              android:paddingLeft="30px"
+              android:gravity="center_vertical"
+              android:paddingRight="30px">
+
+    <ImageView
+            android:layout_width="80px"
+            android:layout_height="80px"
+            app:layout_auto_baseheight="width"
+            android:src="@drawable/default_avatar"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大佬"
+                android:textSize="32px"
+                android:textColor="@color/black"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#888888"
+                android:textSize="30px"
+                android:layout_marginTop="5px"
+                android:text="我家养了一条鲨鱼"/>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+
+    <TextView
+            android:layout_width="120px"
+            android:layout_height="52px"
+            android:textSize="24px"
+            android:text="解除"
+            android:gravity="center"
+            android:background="@drawable/shape_common_relieve"
+            android:textColor="@color/white"/>
+
+
+</LinearLayout>

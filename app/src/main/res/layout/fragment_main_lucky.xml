@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="107px"
+            android:orientation="horizontal">
+
+
+        <LinearLayout
+                android:id="@+id/ll_merchant_living_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+            <ImageView
+                    android:layout_width="128px"
+                    android:layout_height="128px"
+                    app:layout_auto_baseheight="width"
+                    android:src="@drawable/main_lucky_everyday"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18px"
+                    android:textSize="28px"
+                    android:textColor="@color/black"
+                    android:text="每日抽奖"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/ll_weekly_lucky"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="168px"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+            <ImageView
+                    android:layout_width="128px"
+                    android:layout_height="128px"
+                    app:layout_auto_baseheight="width"
+                    android:src="@drawable/main_lucky_weekly"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18px"
+                    android:textSize="28px"
+                    android:textColor="@color/black"
+                    android:text="每周抽奖"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

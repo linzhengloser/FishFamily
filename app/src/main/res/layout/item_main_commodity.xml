@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingBottom="28px">
+
+    <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="370px"
+            android:src="@drawable/default_avatar"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="28px"
+            android:textColor="@color/black"
+            android:layout_marginRight="18px"
+            android:layout_marginLeft="18px"
+            android:layout_marginTop="10px"
+            android:layout_marginBottom="18px"
+            android:text="孔雀鱼饲料孔雀鱼饲料孔雀鱼饲料"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18px"
+            android:layout_marginLeft="18px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fa0f41"
+                android:textSize="34px"
+                android:text="2333.33"/>
+
+        <View
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="武汉"
+                android:textSize="26px"
+                android:textColor="#999999"/>
+
+    </LinearLayout>
+
+</LinearLayout>

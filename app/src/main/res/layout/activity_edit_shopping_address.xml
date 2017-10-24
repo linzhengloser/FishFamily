@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="#fafafa"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include
+            layout="@layout/common_titile_bar"
+            />
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingLeft="30px"
+            >
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="收货人姓名:"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparency"
+                    android:textColor="@color/black"
+                    android:textSize="30px"
+                    android:hint="请输入收货人姓名"
+                    android:layout_marginLeft="17px"
+                    />
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dddddd"/>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="手机号码:"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparency"
+                    android:textColor="@color/black"
+                    android:textSize="30px"
+                    android:hint="请输入手机号码"
+                    android:layout_marginLeft="17px"
+                    />
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dddddd"/>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="省份:"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparency"
+                    android:textColor="@color/black"
+                    android:textSize="30px"
+                    android:hint="请选择省份"
+                    android:layout_marginLeft="17px"
+                    />
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dddddd"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="城市:"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparency"
+                    android:textColor="@color/black"
+                    android:textSize="30px"
+                    android:hint="请选择城市"
+                    android:layout_marginLeft="17px"
+                    />
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dddddd"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="区县:"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparency"
+                    android:textColor="@color/black"
+                    android:textSize="30px"
+                    android:hint="请选择区县"
+                    android:layout_marginLeft="17px"
+                    />
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dddddd"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="街道地址:"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparency"
+                    android:textColor="@color/black"
+                    android:textSize="30px"
+                    android:hint="街道编号/名称，楼宇地址"
+                    android:layout_marginLeft="17px"
+                    />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:background="@color/white"
+            android:layout_marginTop="20px"
+            android:orientation="horizontal"
+            android:paddingLeft="30px"
+            android:gravity="center_vertical"
+            android:paddingRight="37px">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="每次下单默认使用该地址"
+                android:textSize="30px"
+                android:textColor="#999999"
+                />
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        <ImageView
+                android:layout_width="44px"
+                android:layout_height="44px"
+                app:layout_auto_baseheight="width"
+                android:src="@drawable/common_selected"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

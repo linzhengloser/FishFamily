@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    
+    <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="370px"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:textColor="@color/black"
+            android:textSize="28px"
+            android:paddingLeft="15px"
+            android:paddingRight="20px"
+            android:paddingTop="12px"
+            android:text="娃娃鱼大头鱼美人鱼娃娃鱼大头鱼美人鱼"
+            />
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="14px"
+            android:paddingRight="20px"
+            android:paddingBottom="20px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+        
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥58.00"
+                android:textColor="#fa0f41"
+                android:textSize="34px"/>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20px"
+                android:textColor="#999999"
+                android:text="月销2.33万笔"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

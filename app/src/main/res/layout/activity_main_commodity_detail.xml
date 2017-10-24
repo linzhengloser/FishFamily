@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include
+            layout="@layout/common_titile_bar"
+            />
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_commodity_detail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#d3d3d3"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="98px"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+        <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal">
+
+                <ImageView
+                        android:layout_width="27px"
+                        android:layout_height="24px"
+                        android:src="@drawable/main_post_like_unselected"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#888888"
+                        android:textSize="24px"
+                        android:text="点赞"
+                        android:layout_marginTop="12px"/>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal">
+
+                <ImageView
+                        android:layout_width="32px"
+                        android:layout_height="28px"
+                        android:src="@drawable/tab_chat_freely_selected"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#888888"
+                        android:textSize="24px"
+                        android:text="聊天"
+                        android:layout_marginTop="12px"/>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <TextView
+                android:layout_width="195px"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:textSize="30px"
+                android:text="立即购买"/>
+
+        <TextView
+                android:layout_width="195px"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="30px"
+                android:background="#fa0f41"
+                android:textColor="@color/white"
+                android:text="加入购物车"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

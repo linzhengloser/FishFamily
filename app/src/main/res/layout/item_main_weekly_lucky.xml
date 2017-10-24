@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="110px"
+              android:orientation="vertical"
+              android:background="@color/white">
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dddddd"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="30px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+        <ImageView
+                android:layout_width="70px"
+                android:layout_height="70px"
+                android:src="@drawable/default_avatar"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20px"
+                android:paddingRight="20px"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24px"
+                        android:textColor="@color/colorPrimary"
+                        android:text="大佬"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#666666"
+                        android:textSize="24px"
+                        android:layout_marginLeft="20px"
+                        android:text="(IP:192.168.1.1) 湖北"/>
+
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8px"
+                    android:text="参与了1人次 2017-01-01"
+                    android:textSize="24px"
+                    android:textColor="#666666"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

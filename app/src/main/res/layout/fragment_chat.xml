@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srl_chat"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_chat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#d3d3d3"/>
+
+    <!-- 输入框 -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="98px"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+
+        <ImageView
+                android:id="@+id/iv_voice"
+                android:layout_width="56px"
+                android:layout_height="56px"
+                app:layout_auto_basewidth="height"
+                android:src="@drawable/chat_voice_unselected"/>
+
+        <EditText
+                android:id="@+id/et_input_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="14px"
+                android:layout_marginRight="14px"
+                android:padding="14px"
+                android:background="@drawable/shape_chat_input"
+                />
+
+        <ImageView
+                android:id="@+id/iv_expression"
+                android:layout_width="56px"
+                android:layout_height="56px"
+                android:layout_marginRight="15px"
+                app:layout_auto_basewidth="height"
+                android:src="@drawable/chat_expression"/>
+
+        <ImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="56px"
+                android:layout_height="56px"
+                app:layout_auto_basewidth="height"
+                android:src="@drawable/chat_menu"/>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#d3d3d3"/>
+
+    <!-- menu -->
+    <LinearLayout
+            android:id="@+id/ll_menu"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="232px"
+            android:orientation="horizontal"
+            android:background="#EEEEEE">
+
+        <!-- 照片 -->
+        <LinearLayout
+                android:id="@+id/ll_photo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="26px"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+            <ImageView
+                    android:layout_width="130px"
+                    android:layout_height="130px"
+                    app:layout_auto_basewidth="height"
+                    android:src="@drawable/chat_menu_photo"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12px"
+                    android:textSize="30px"
+                    android:textColor="#444444"
+                    android:text="照片"/>
+
+
+        </LinearLayout>
+
+        <!-- 拍摄 -->
+        <LinearLayout
+                android:id="@+id/ll_camera"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="26px"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+            <ImageView
+                    android:layout_width="130px"
+                    android:layout_height="130px"
+                    app:layout_auto_basewidth="height"
+                    android:src="@drawable/chat_menu_camera"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12px"
+                    android:textSize="30px"
+                    android:textColor="#444444"
+                    android:text="拍摄"/>
+
+        </LinearLayout>
+
+        <!-- 视屏聊天 -->
+        <LinearLayout
+                android:id="@+id/ll_chat_vidoe"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="26px"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+            <ImageView
+                    android:layout_width="130px"
+                    android:layout_height="130px"
+                    app:layout_auto_basewidth="height"
+                    android:src="@drawable/chat_menu_video"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12px"
+                    android:textSize="30px"
+                    android:textColor="#444444"
+                    android:text="视频聊天"/>
+
+        </LinearLayout>
+
+        <!-- 位置 -->
+        <LinearLayout
+                android:id="@+id/ll_chat_location"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="26px"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+            <ImageView
+                    android:layout_width="130px"
+                    android:layout_height="130px"
+                    app:layout_auto_basewidth="height"
+                    android:src="@drawable/chat_menu_location"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12px"
+                    android:textSize="30px"
+                    android:textColor="#444444"
+                    android:text="位置"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- record voice -->
+    <LinearLayout
+            android:id="@+id/ll_record_voice"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="394px"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33px"
+                android:textSize="26px"
+                android:textColor="#444444"
+                android:text="手指上滑,取消发送"/>
+
+        <com.lz.fishfamily.ui.view.RecordVoiceView
+                android:id="@+id/iv_record_vocie"
+                android:layout_width="190px"
+                android:layout_height="190px"
+                android:layout_marginTop="14px"
+                app:layout_auto_basewidth="height"
+                android:src="@drawable/chat_record_voice"/>
+
+        <TextView
+                android:id="@+id/tv_record_voice_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14px"
+                android:textSize="26px"
+                android:textColor="#444444"
+                android:text="00:00"/>
+
+        <com.lz.fishfamily.ui.view.VoiceView
+                android:id="@+id/vv_voice_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16px"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#eeeeee">
+
+    <include
+            layout="@layout/common_titile_bar"
+            />
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="922px"
+            android:background="@drawable/sign_in_bg">
+
+        <ImageView
+                android:layout_width="44px"
+                android:layout_height="44px"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="43px"
+                android:src="@drawable/sign_in_help"/>
+
+        <FrameLayout
+                android:layout_width="226px"
+                android:layout_height="50px"
+                android:layout_gravity="right"
+                android:layout_marginTop="40px"
+                android:background="@drawable/shape_sign_in_fish_bean">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/sign_in_my_fish_bean"
+                    android:text="我的鱼豆"/>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+                android:layout_width="288px"
+                android:layout_height="278px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="110px"
+                android:background="@drawable/sign_in_fish">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="180px"
+                    android:textSize="30px"
+                    android:textColor="@color/white"
+                    android:text="23333"/>
+
+
+        </FrameLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="543px"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+            <TextView
+                    android:layout_width="600px"
+                    android:layout_height="110px"
+                    android:gravity="center"
+                    android:background="@drawable/sign_in_btn"
+                    android:textSize="30px"
+                    android:textColor="@color/white"
+                    android:text="明日签到领10鱼豆"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30px"
+                    android:textSize="30px"
+                    android:textColor="@color/colorPrimary"
+                    android:text="连续签到有更多惊喜哦"/>
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="44px"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px"
+                    android:orientation="horizontal"
+                    android:background="@color/white">
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="68px"
+                            android:gravity="center"
+                            android:background="@drawable/sign_in_already"
+                            android:textSize="28px"
+                            android:textColor="@color/black"
+                            android:text="+5"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24px"
+                            android:textColor="@color/black"
+                            android:text="1天"/>
+
+                </LinearLayout>
+
+
+                <View
+                        android:layout_width="24px"
+                        android:layout_height="4px"
+                        android:layout_marginLeft="6px"
+                        android:layout_marginRight="6px"
+                        android:layout_marginTop="32px"
+                        android:background="@color/colorPrimary"/>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="68px"
+                            android:gravity="center"
+                            android:background="@drawable/sign_in_current"
+                            android:textSize="28px"
+                            android:textColor="@color/white"
+                            android:text="+5"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24px"
+                            android:textColor="@color/black"
+                            android:text="2天"/>
+
+                </LinearLayout>
+
+
+                <View
+                        android:layout_width="24px"
+                        android:layout_height="4px"
+                        android:layout_marginLeft="6px"
+                        android:layout_marginRight="6px"
+                        android:layout_marginTop="32px"
+                        android:background="@color/colorPrimary"/>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="68px"
+                            android:gravity="center"
+                            android:background="@drawable/sign_in_later"
+                            android:textSize="28px"
+                            android:textColor="@color/colorPrimary"
+                            android:text="+5"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24px"
+                            android:textColor="@color/black"
+                            android:text="3天"/>
+
+                </LinearLayout>
+
+
+                <View
+                        android:layout_width="24px"
+                        android:layout_height="4px"
+                        android:layout_marginLeft="6px"
+                        android:layout_marginRight="6px"
+                        android:layout_marginTop="32px"
+                        android:background="@color/colorPrimary"/>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="68px"
+                            android:gravity="center"
+                            android:background="@drawable/sign_in_later"
+                            android:textSize="28px"
+                            android:textColor="@color/colorPrimary"
+                            android:text="+5"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24px"
+                            android:textColor="@color/black"
+                            android:text="4天"/>
+
+                </LinearLayout>
+
+
+                <View
+                        android:layout_width="24px"
+                        android:layout_height="4px"
+                        android:layout_marginLeft="6px"
+                        android:layout_marginRight="6px"
+                        android:layout_marginTop="32px"
+                        android:background="@color/colorPrimary"/>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="68px"
+                            android:gravity="center"
+                            android:background="@drawable/sign_in_later"
+                            android:textSize="28px"
+                            android:textColor="@color/colorPrimary"
+                            android:text="+5"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24px"
+                            android:textColor="@color/black"
+                            android:text="5天"/>
+
+                </LinearLayout>
+
+
+                <View
+                        android:layout_width="24px"
+                        android:layout_height="4px"
+                        android:layout_marginLeft="6px"
+                        android:layout_marginRight="6px"
+                        android:layout_marginTop="32px"
+                        android:background="@color/colorPrimary"/>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="68px"
+                            android:gravity="center"
+                            android:background="@drawable/sign_in_later"
+                            android:textSize="28px"
+                            android:textColor="@color/colorPrimary"
+                            android:text="+5"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24px"
+                            android:textColor="@color/black"
+                            android:text="6天"/>
+
+                </LinearLayout>
+
+
+                <View
+                        android:layout_width="24px"
+                        android:layout_height="4px"
+                        android:layout_marginLeft="6px"
+                        android:layout_marginRight="6px"
+                        android:layout_marginTop="32px"
+                        android:background="@color/colorPrimary"/>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="68px"
+                            android:gravity="center"
+                            android:background="@drawable/sign_in_later"
+                            android:textSize="28px"
+                            android:textColor="@color/colorPrimary"
+                            android:text="+10"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24px"
+                            android:textColor="@color/black"
+                            android:text="7天"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

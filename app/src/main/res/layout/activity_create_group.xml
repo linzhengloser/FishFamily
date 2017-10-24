@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_titile_bar"/>
+
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#AAAAAA"/>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:background="#EEEEEE"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="15dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="15px"
+                android:paddingRight="15px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/shape_create_group_search"
+                >
+
+            <ImageView
+                    android:layout_width="35px"
+                    android:layout_height="35px"
+                    app:layout_auto_basewidth="height"
+                    android:src="@drawable/create_group_search"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16px"
+                    android:background="@color/transparency"
+                    android:textSize="30px"
+                    android:hint="请输入联系人名称"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#AAAAAA"/>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_create_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <com.lz.library.ui.view.indexbar.IndexBar
+                android:id="@+id/ib_create_group"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"/>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

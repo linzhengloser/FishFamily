@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingTop="36px"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:src="@drawable/default_avatar"/>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="20px"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="30px"
+                            android:textColor="@color/black"
+                            android:text="大佬"/>
+
+                    <ImageView
+                            android:layout_width="77px"
+                            android:layout_height="32px"
+                            android:layout_marginLeft="15px"
+                            android:src="@drawable/mine_level_six"/>
+
+                </LinearLayout>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4px"
+                        android:textSize="24px"
+                        android:textColor="#999999"
+                        android:text="来自龙鱼圈"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="#999999"
+                    android:text="今天 12:12"/>
+
+        </LinearLayout>
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24px"
+                android:textSize="30px"
+                android:textColor="@color/black"
+                android:text="新手教学养鱼小知识。"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8px"
+                android:textSize="26px"
+                android:textColor="#999999"
+                android:text="糖醋鱼糖醋鱼糖醋鱼糖醋鱼糖醋鱼糖醋鱼糖醋鱼糖醋鱼糖醋鱼糖醋鱼糖醋鱼糖醋鱼"/>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220px"
+                android:layout_marginTop="13px"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/default_avatar"/>
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="16px"
+                    android:layout_marginRight="16px"
+                    android:src="@drawable/default_avatar"/>
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/default_avatar"/>
+
+        </LinearLayout>
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30px"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/main_post_like_selected"
+                android:drawablePadding="7dp"
+                android:text="2333"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_marginTop="20px"
+                android:orientation="horizontal">
+
+
+            <ImageView
+                    android:layout_width="60px"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12px"
+                    app:layout_auto_baseheight="width"
+                    android:src="@drawable/default_avatar"/>
+
+            <ImageView
+                    android:layout_width="60px"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12px"
+                    app:layout_auto_baseheight="width"
+                    android:src="@drawable/default_avatar"/>
+
+            <ImageView
+                    android:layout_width="60px"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12px"
+                    app:layout_auto_basewidth="height"
+                    app:layout_auto_baseheight="width"
+                    android:src="@drawable/default_avatar"/>
+
+            <ImageView
+                    android:layout_width="60px"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12px"
+                    app:layout_auto_baseheight="width"
+                    android:src="@drawable/default_avatar"/>
+
+            <ImageView
+                    android:layout_width="60px"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12px"
+                    app:layout_auto_baseheight="width"
+                    android:src="@drawable/default_avatar"/>
+
+            <ImageView
+                    android:layout_width="60px"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12px"
+                    app:layout_auto_baseheight="width"
+                    android:src="@drawable/default_avatar"/>
+
+            <ImageView
+                    android:layout_width="60px"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12px"
+                    app:layout_auto_baseheight="width"
+                    android:src="@drawable/default_avatar"/>
+
+            <ImageView
+                    android:layout_width="60px"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12px"
+                    app:layout_auto_baseheight="width"
+                    android:src="@drawable/default_avatar"/>
+
+            <ImageView
+                    android:layout_width="60px"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="34px"
+                    app:layout_auto_baseheight="width"
+                    android:src="@drawable/default_avatar"/>
+
+            <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="25px"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/common_arrows"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="20px"
+            android:background="#dddddd"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:layout_marginBottom="30px"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/main_post_detail_comment_total_number"
+            android:text="2333"/>
+
+</LinearLayout>

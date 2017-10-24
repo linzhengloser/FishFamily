@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+            layout="@layout/common_titile_bar"
+            />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="158px"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            >
+
+
+        <ImageView
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:src="@drawable/default_avatar"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="某某某水族用品专营店"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24px"
+                    android:textColor="#999999"
+                    android:text="店铺介绍: 专注水族馆15年"/>
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="120px"
+                    android:layout_height="52px"
+                    android:gravity="center"
+                    android:background="@drawable/shape_common_attention"
+                    android:textSize="24px"
+                    android:textColor="@color/colorPrimary"
+                    android:text="+关注"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:textSize="24px"
+                    android:textColor="#999999"
+                    android:text="2333万粉丝"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30px"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="34px"
+                    android:textColor="#999999"
+                    android:text="好评率"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="110px"
+                    android:textSize="34px"
+                    android:textColor="@color/black"
+                    android:text="100%"
+                    />
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dddddd"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="34px"
+                    android:textColor="#999999"
+                    android:text="店铺简介"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="74px"
+                    android:textSize="34px"
+                    android:textColor="@color/black"
+                    android:text="专注水族15年"
+                    />
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dddddd"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="34px"
+                    android:textColor="#999999"
+                    android:text="所在地区"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="74px"
+                    android:textSize="34px"
+                    android:textColor="@color/black"
+                    android:text="湖北武汉"
+                    />
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dddddd"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="34px"
+                    android:textColor="#999999"
+                    android:text="开店时间"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="74px"
+                    android:textSize="34px"
+                    android:textColor="@color/black"
+                    android:text="2017-01-01"
+                    />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:layout_marginTop="30px"
+            android:paddingLeft="30px"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="34px"
+                android:textColor="@color/black"
+                android:text="联系卖家"/>
+
+        <ImageView
+                android:layout_width="40px"
+                android:layout_height="36px"
+                android:layout_marginLeft="34px"
+                android:src="@drawable/tab_chat_freely_selected"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

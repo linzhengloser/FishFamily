@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="100px"
+              android:paddingLeft="28px"
+              android:paddingRight="28px"
+              android:orientation="horizontal"
+              android:gravity="center_vertical"
+              android:clipChildren="false">
+
+
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        <ImageView
+                android:id="@+id/iv_item_conversation_avatar"
+                android:layout_width="70px"
+                android:layout_height="70px"/>
+
+        <!-- 未读消息个数 -->
+        <TextView
+                android:id="@+id/tv_item_conversation_unread_msg_count"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="-12px"
+                android:layout_marginTop="-12px"
+                android:paddingLeft="5px"
+                android:paddingRight="5px"
+                android:gravity="center"
+                android:minHeight="28px"
+                android:minWidth="28px"
+                android:background="@drawable/shape_conversation_unread_count"
+                android:textSize="22px"
+                android:textColor="@color/white"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="28px"
+            android:orientation="vertical">
+
+        <!-- 用户昵称 -->
+        <TextView
+                android:id="@+id/tv_item_conversation_user_nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30px"
+                android:textColor="#242424"/>
+
+        <!--  最后条消息的内容 -->
+        <TextView
+                android:id="@+id/tv_item_conversation_last_msg_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5px"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="26px"
+                android:textColor="#999999"/>
+
+    </LinearLayout>
+
+    <!-- 最后一条消息的时间 -->
+    <TextView
+            android:id="@+id/tv_item_conversation_last_msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="15px"
+            android:textSize="22px"
+            android:textColor="#999999"/>
+
+
+</LinearLayout>

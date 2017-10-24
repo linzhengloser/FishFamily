@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_shop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+    <LinearLayout
+            android:id="@+id/ll_shop_main_bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="98px"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30px"
+                android:textColor="@color/black"
+                android:text="店铺详情"
+                android:gravity="center"/>
+
+        <View
+                android:layout_width="1px"
+                android:layout_height="40px"
+                android:layout_gravity="center_vertical"
+                android:background="#dddddd"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30px"
+                android:textColor="@color/black"
+                android:text="热门分类"
+                android:gravity="center"/>
+
+        <View
+                android:layout_width="1px"
+                android:layout_height="40px"
+                android:layout_gravity="center_vertical"
+                android:background="#dddddd"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30px"
+                android:textColor="@color/black"
+                android:text="商户客服"
+                android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

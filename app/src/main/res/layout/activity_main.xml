@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clipChildren="false">
+
+    <com.lz.fishfamily.ui.view.MyViewPager
+            android:id="@+id/vp_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+    </com.lz.fishfamily.ui.view.MyViewPager>
+
+    <!-- 分割线 -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:orientation="horizontal">
+
+        <View
+                android:layout_width="334px"
+                android:layout_height="match_parent"
+                android:background="#D3D3D3"/>
+
+        <View
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        <View
+                android:layout_width="334px"
+                android:layout_height="match_parent"
+                android:background="#D3D3D3"/>
+        
+    </LinearLayout>
+    
+    <!-- 底部 -->
+    <LinearLayout
+            android:id="@+id/ll_main_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="98px"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+
+        <!-- 首页 -->
+        <LinearLayout
+                android:id="@+id/ll_main"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+
+            <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10px"
+                    app:layout_auto_basewidth="height"
+                    android:src="@drawable/tab_main_unselected"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13px"
+                    android:textSize="22px"
+                    android:textColor="@color/tab_unselected_text_color"
+                    android:text="首页"/>
+
+        </LinearLayout>
+
+        <!-- 畅聊 -->
+        <LinearLayout
+                android:id="@+id/ll_chat_freely"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+
+            <ImageView
+                    android:layout_width="45px"
+                    android:layout_height="40px"
+                    android:layout_marginTop="10px"
+                    android:src="@drawable/tab_chat_freely_unselected"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13px"
+                    android:textSize="22px"
+                    android:textColor="@color/tab_unselected_text_color"
+                    android:text="畅聊"/>
+
+        </LinearLayout>
+
+        <!-- 鱼友商城 -->
+        <LinearLayout
+                android:id="@+id/ll_fish_friend_shop"
+                android:layout_width="0dp"
+                android:layout_height="122px"
+                android:layout_weight="1.0"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+            <ImageView
+                    android:layout_width="71px"
+                    android:layout_height="71px"
+                    android:layout_marginBottom="16px"
+                    android:src="@drawable/tab_fish_friend_shop"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22px"
+                    android:textColor="@color/tab_unselected_text_color"
+                    android:text="鱼友商城"/>
+
+
+        </LinearLayout>
+
+        <!-- 活动 -->
+        <LinearLayout
+                android:id="@+id/ll_activity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+
+            <ImageView
+                    android:layout_width="37px"
+                    android:layout_height="38px"
+                    android:layout_marginTop="10px"
+                    android:src="@drawable/tab_activity_unselected"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13px"
+                    android:textSize="22px"
+                    android:textColor="@color/tab_unselected_text_color"
+                    android:text="活动"/>
+
+        </LinearLayout>
+
+        <!-- 我的 -->
+        <LinearLayout
+                android:id="@+id/ll_mine"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+
+            <ImageView
+                    android:layout_width="39px"
+                    android:layout_height="38px"
+                    android:layout_marginTop="10px"
+                    android:src="@drawable/tab_mine_unselected"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13px"
+                    android:textSize="22px"
+                    android:textColor="@color/tab_unselected_text_color"
+                    android:text="我的"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#fafafa">
+
+    <include layout="@layout/common_titile_bar"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="30px"
+            android:background="#dddddd"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30px"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="旧密码"/>
+
+            <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="72px"
+                    android:background="@color/transparency"
+                    android:textSize="30px"
+                    android:textColorHint="#999999"
+                    android:textColor="@color/black"
+                    android:hint="请输入旧密码"/>
+
+        </LinearLayout>
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dddddd"/>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="新密码"/>
+
+            <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="72px"
+                    android:background="@color/transparency"
+                    android:textSize="30px"
+                    android:textColorHint="#999999"
+                    android:textColor="@color/black"
+                    android:hint="请输入新密码"/>
+
+        </LinearLayout>
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dddddd"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="确认密码"/>
+
+            <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="39px"
+                    android:background="@color/transparency"
+                    android:textSize="30px"
+                    android:textColorHint="#999999"
+                    android:textColor="@color/black"
+                    android:hint="请再次输入新密码"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dddddd"/>
+
+
+</LinearLayout>

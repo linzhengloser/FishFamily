@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <include
+            layout="@layout/common_titile_bar"
+            />
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_weekly_lucky"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="98px"
+            android:background="@color/colorPrimary"
+            android:text="立即参与"
+            android:textColor="@color/white"
+            android:textSize="32px"
+            android:gravity="center"/>
+
+</LinearLayout>

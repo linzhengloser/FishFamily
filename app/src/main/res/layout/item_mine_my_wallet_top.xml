@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="410px"
+             android:orientation="vertical"
+             android:background="@color/colorPrimary">
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65px"
+            android:layout_marginTop="60px"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:layout_width="260px"
+                android:layout_height="228px"
+                android:src="@drawable/mine_my_wallet_top"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="33px"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32px"
+                    android:textSize="30px"
+                    android:textColor="@color/white"
+                    android:text="账户余额"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="80px"
+                    android:textColor="@color/white"
+                    android:text="23333"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="90px"
+            android:layout_marginRight="90px"
+            android:layout_marginBottom="33px"
+            android:orientation="horizontal">
+
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="50px"
+                android:gravity="center"
+                android:background="@drawable/shape_mine_my_wallet_top_recharge_withdraw_bg"
+                android:textSize="30px"
+                android:textColor="@color/white"
+                android:text="充值"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/shape_mine_my_wallet_top_recharge_withdraw_bg"
+                android:textSize="30px"
+                android:textColor="@color/white"
+                android:text="提现"/>
+
+    </LinearLayout>
+
+</FrameLayout>

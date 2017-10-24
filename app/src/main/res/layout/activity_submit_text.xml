@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fafafa">
+
+
+    <include
+            layout="@layout/common_titile_bar"
+            />
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="5dp"
+            android:background="@drawable/shape_submit_text"
+            android:layout_marginTop="30px">
+
+
+        <EditText
+                android:id="@+id/et_submit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparency"
+                android:textSize="30px"
+                android:textColorHint="#999999"
+                android:textColor="@color/black"
+                android:hint="请输入反馈，我们将为您不断改进"/>
+        
+        <TextView
+                android:id="@+id/tv_submit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#999999"
+                android:textSize="24px"
+                android:text="(0/20)"
+                android:layout_gravity="right|bottom"/>
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="300px"
+              android:background="@drawable/shape_common_gray_border_bg">
+    
+    
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:gravity="center_vertical"
+            android:paddingLeft="10px"
+            android:background="#dddddd"
+            android:textSize="30px"
+            android:textColor="#242424"
+            android:text="(2333期)  正品日本进口鱼竿"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#aaaaaa"
+            />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="24px"
+            android:paddingLeft="10px"
+            android:orientation="horizontal">
+        
+        <ImageView
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:src="@drawable/default_avatar"/>
+        
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30px"
+                android:orientation="vertical">
+            
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666666"
+                    android:text="获奖者: 大佬"
+                    android:textSize="26px"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666666"
+                    android:text="期号: 2017210245388138"
+                    android:layout_marginTop="6px"
+                    android:textSize="26px"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666666"
+                    android:text="揭晓时间: 2017-10-10 10:10"
+                    android:layout_marginTop="6px"
+                    android:textSize="26px"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666666"
+                    android:text="幸运号码: 10086"
+                    android:layout_marginTop="6px"
+                    android:textSize="26px"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666666"
+                    android:text="本期参与: 233人次"
+                    android:layout_marginTop="6px"
+                    android:textSize="26px"/>
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+
+</LinearLayout>

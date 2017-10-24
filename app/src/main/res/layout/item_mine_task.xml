@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:background="@color/white"
+              android:paddingTop="26px"
+              android:paddingBottom="26px"
+              android:paddingLeft="30px"
+              android:paddingRight="30px"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    
+    
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30px"
+                android:text="签到1次(0/1)"
+                android:textColor="#242424"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30px"
+                android:text="在我的首页中签到一次"
+                android:layout_marginTop="18px"
+                android:textColor="#666666"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:text="奖励:  经验值+5点  鱼豆+5点"/>
+
+    </LinearLayout>
+    
+    <ImageView
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:src="@drawable/mine_task_center_finish"
+            android:layout_gravity="center_vertical"/>
+
+</LinearLayout>

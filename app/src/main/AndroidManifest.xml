@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.lz.fishfamily">
+
+
+    <!-- Required -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+            android:name=".MyApplication"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            tools:replace="android:label,android:theme">
+
+        <meta-data
+                android:name="design_width"
+                android:value="750">
+        </meta-data>
+        <meta-data
+                android:name="design_height"
+                android:value="1344">
+        </meta-data>
+
+        <!-- 首页 -->
+        <activity
+                android:name=".ui.MainActivity"
+                android:windowSoftInputMode="stateHidden"
+                android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
+        <!-- 聊天界面 -->
+        <activity
+                android:name=".ui.activity.ChatActivity"
+                android:windowSoftInputMode="adjustResize"/>
+        <!-- 创群界面 -->
+        <activity android:name=".ui.activity.CreateGroupActivity"/>
+
+        <!-- 登录界面 -->
+        <activity android:name=".ui.activity.LoginActivity">
+
+        </activity>
+
+        <!-- 注册界面 -->
+        <activity android:name=".ui.activity.RegisterActivity"/>
+
+        <!-- 完善 -->
+        <activity android:name=".ui.activity.CompleteProfileActivity"/>
+
+        <!-- 反馈 or 修改描述 -->
+        <activity android:name=".ui.activity.mine.SubmitTextActivity"/>
+
+        <!-- 设置 -->
+        <activity android:name=".ui.activity.mine.SettingActivity"/>
+
+        <!-- 修改密码 -->
+        <activity android:name=".ui.activity.mine.ModificationPwdActivity"/>
+
+        <!-- 商家入驻 -->
+        <activity android:name=".ui.activity.mine.MerchantEnterActivity"/>
+
+
+        <!-- 修改 or 新增 收货地址 -->
+        <activity android:name=".ui.activity.mine.EditShoppingAddressActivity"/>
+
+        <!-- 我的粉丝 -->
+        <activity android:name=".ui.activity.mine.FansAttentionListActivity"/>
+
+        <!-- 收货地址 -->
+        <activity android:name=".ui.activity.mine.ShoppingAddressActivity"/>
+
+        <!-- 黑名单 -->
+        <activity android:name=".ui.activity.mine.BlackListActivity"/>
+
+        <!-- 基本信息 -->
+        <activity android:name=".ui.activity.mine.ProfileActivity"/>
+
+        <!-- 草稿箱 -->
+        <activity android:name=".ui.activity.mine.DraftBoxActivity"/>
+
+        <!-- 选择标签 -->
+        <activity android:name=".ui.activity.mine.SelectTagActivity"/>
+
+        <!-- 用户信息 列表展示 -->
+        <activity android:name=".ui.activity.mine.ProfileListActivity"/>
+
+        <!-- 分享列表 -->
+        <activity android:name=".ui.activity.mine.ShareListActivity"/>
+
+        <!-- 签到 -->
+        <activity android:name=".ui.activity.SignInActivity"/>
+
+        <!-- 帖子详情 -->
+        <activity android:name=".ui.activity.main.PostDetailActivity"/>
+
+        <!-- 商品详情 -->
+        <activity android:name=".ui.activity.main.CommodityDetailActivity"/>
+
+        <!-- 赞列表 -->
+        <activity android:name=".ui.fragment.main.LikeListActivity"/>
+
+        <!-- 商家活体 -->
+        <activity
+                android:name=".ui.activity.main.MerchantLivingBodyActivity"
+                android:windowSoftInputMode="stateHidden"
+                />
+
+        <!-- 直播权限申请 -->
+        <activity
+                android:name=".ui.multitype.main.LivePermissionApplyActivity"
+                android:windowSoftInputMode="stateHidden"/>
+
+
+        <!-- 我的钱包 -->
+        <activity android:name=".ui.activity.mine.MyWalletActivity"
+                />
+
+        <!-- 任务中心 -->
+        <activity android:name=".ui.activity.mine.TaskCenterActivity"/>
+
+        <!-- 购物车 -->
+        <activity android:name=".ui.activity.mine.ShoppingCarActivity"/>
+
+        <!-- 交易记录 -->
+        <activity android:name=".ui.activity.mine.TransactionRecordActivity"/>
+
+        <!-- 发布分享 -->
+        <activity android:name=".ui.activity.main.PublishPostActivity"/>
+
+        <!-- 店铺详情 -->
+        <activity android:name=".ui.activity.main.ShopDetailActivity"/>
+
+        <!-- 每周抽奖 -->
+        <activity android:name=".ui.activity.main.WeeklyLuckyActivity"/>
+
+        <!-- 往期揭晓 -->
+        <activity android:name=".ui.activity.main.ToPhaseOutActivity"/>
+
+        <!-- 抽奖详情 -->
+        <activity android:name=".ui.activity.main.LuckyDetailActivity"/>
+
+        <!-- 发布商品 -->
+        <activity android:name=".ui.activity.main.PublishCommodityActivity"/>
+
+        <!-- 发布长帖 -->
+        <activity android:name=".ui.activity.main.PublishLongPostActivity"/>
+
+        <!-- 店铺首页 -->
+        <activity android:name=".ui.activity.main.ShopMainActivity"/>
+
+        <!-- 店铺详情 -->
+        <activity android:name=".ui.activity.main.ShopDetailActivity"/>
+
+
+        <!-- 图片裁剪 -->
+        <activity
+                android:name="com.yalantis.ucrop.UCropActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/Boxing.AppTheme.NoActionBar"/>
+        <activity android:name=".ui.activity.main.PublishLongPostActivity"/>
+
+
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+                android:name="EASEMOB_APPKEY"
+                android:value="1007687534#lzdemo"/>
+        <!-- 声明SDK所需的service SDK核心功能-->
+        <service
+                android:name="com.hyphenate.chat.EMChatService"
+                android:exported="true"/>
+        <service
+                android:name="com.hyphenate.chat.EMJobService"
+                android:permission="android.permission.BIND_JOB_SERVICE"
+                android:exported="true"
+                />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+
+        <provider
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="${applicationId}.file.provider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/boxing_file_provider"/>
+        </provider>
+
+    </application>
+
+</manifest>

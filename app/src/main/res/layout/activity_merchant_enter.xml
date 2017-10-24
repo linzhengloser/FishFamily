@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#fafafa">
+
+    <include layout="@layout/common_titile_bar"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:paddingLeft="30px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+
+        <ImageView
+                android:layout_width="44px"
+                android:layout_height="44px"
+                android:src="@drawable/common_unselected"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14px"
+                android:textSize="30px"
+                android:textColor="#242424"
+                android:text="观赏鱼活体店"/>
+
+        <ImageView
+                android:layout_width="44px"
+                android:layout_height="44px"
+                android:layout_marginLeft="147px"
+                android:src="@drawable/common_selected"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14px"
+                android:textSize="30px"
+                android:textColor="#242424"
+                android:text="观赏鱼活体店"/>
+
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dddddd"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30px"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="姓名"/>
+
+            <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="99px"
+                    android:background="@color/transparency"
+                    android:textSize="30px"
+                    android:textColorHint="#999999"
+                    android:textColor="@color/black"
+                    android:hint="请输入姓名"/>
+
+        </LinearLayout>
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dddddd"/>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="身份证号"/>
+
+            <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="37px"
+                    android:background="@color/transparency"
+                    android:textSize="30px"
+                    android:textColorHint="#999999"
+                    android:textColor="@color/black"
+                    android:hint="请是输入身份证件号码"/>
+
+        </LinearLayout>
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dddddd"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="电话"/>
+
+            <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="98px"
+                    android:background="@color/transparency"
+                    android:textSize="30px"
+                    android:textColorHint="#999999"
+                    android:textColor="@color/black"
+                    android:hint="请输入电话号码"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dddddd"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="37px"
+            android:textSize="30px"
+            android:textColor="@color/black"
+            android:text="上传证件"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="35px"
+            android:layout_marginBottom="100px"
+            android:paddingLeft="25px"
+            android:paddingRight="25px"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="50px"
+                    android:background="@drawable/shape_common_upload_imge_bg">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="18px"
+                        android:textSize="30px"
+                        android:textColor="@color/black"
+                        android:text="身份证正面"/>
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_common_upload_imge_bg">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="18px"
+                        android:textSize="30px"
+                        android:textColor="@color/black"
+                        android:text="身份证反面"/>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="32px"
+                android:orientation="horizontal">
+
+            <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="50px"
+                    android:background="@drawable/shape_common_upload_imge_bg">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="18px"
+                        android:textSize="30px"
+                        android:textColor="@color/black"
+                        android:text="公司营业执照"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_common_upload_imge_bg">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="18px"
+                        android:textSize="30px"
+                        android:textColor="@color/black"
+                        android:text="个体工商户营业执照"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="78px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginBottom="20px"
+            android:gravity="center"
+            android:background="@drawable/shape_merchant_enter_submit"
+            android:textSize="30px"
+            android:textColor="@color/white"
+            android:text="提交申请"/>
+
+
+</LinearLayout>

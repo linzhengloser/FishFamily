@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="622px"
+            android:background="#eeeeee">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="Banner"
+                android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30px"
+            android:textColor="@color/black"
+            android:text="(第888期) 送保时捷911模型玩具"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:layout_marginTop="28px"
+            />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30px"
+            android:text="总需:  2333人次"
+            android:layout_marginTop="16px"
+            android:textColor="#999999"/>
+    
+    <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="8px"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:progress="50"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_marginTop="8px"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            android:textSize="24px"
+            android:text="已参与444人次"
+            android:paddingLeft="30px"
+            android:layout_marginTop="8px"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="20px"
+            android:background="#fafafa"
+            android:layout_marginTop="16px"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30px">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="86px"
+                android:paddingRight="30px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+            
+            <ImageView
+                    android:layout_width="38px"
+                    android:layout_height="38px"
+                    app:layout_auto_baseheight="width"
+                    android:src="@drawable/main_weekly_lucky_graphic_detail"/>
+            
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="图文详情"
+                    android:textSize="30px"
+                    android:layout_marginLeft="30px"/>
+            
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            
+            <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="25px"
+                    android:src="@drawable/common_arrows"/>
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dddddd"/>
+
+        <LinearLayout
+                android:id="@+id/ll_to_phase_out"
+                android:layout_width="match_parent"
+                android:layout_height="86px"
+                android:paddingRight="30px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="38px"
+                    android:layout_height="38px"
+                    app:layout_auto_baseheight="width"
+                    android:src="@drawable/main_weekly_lucky_to_phase_out"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="往期揭晓"
+                    android:textSize="30px"
+                    android:layout_marginLeft="30px"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+            <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="25px"
+                    app:layout_auto_baseheight="width"
+                    android:src="@drawable/common_arrows"/>
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dddddd"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="86px"
+                android:paddingRight="30px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="38px"
+                    android:layout_height="38px"
+                    android:src="@drawable/main_weekly_lucky_share"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="晒单分享"
+                    android:textSize="30px"
+                    android:layout_marginLeft="30px"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+            <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="25px"
+                    android:src="@drawable/common_arrows"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="20px"
+            android:background="#fafafa"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="86px"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px">
+
+        <ImageView
+                android:layout_width="38px"
+                android:layout_height="43px"
+                android:src="@drawable/main_weekly_lucky_all_apply_record"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="所有参与记录"
+                android:textSize="30px"
+                android:layout_marginLeft="30px"/>
+
+    </LinearLayout>
+
+</LinearLayout>

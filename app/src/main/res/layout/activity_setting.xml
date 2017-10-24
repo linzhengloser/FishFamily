@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#fafafa">
+
+    <include layout="@layout/common_titile_bar"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="20px"
+            android:background="#f1f1f1"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dddddd"/>
+
+    <!-- 密码修改 -->
+    <LinearLayout
+            android:id="@+id/ll_modification_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30px"
+                android:textColor="#242424"
+                android:text="密码修改"/>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        <ImageView
+                android:layout_width="16px"
+                android:layout_height="25px"
+                android:src="@drawable/common_arrows"/>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="30px"
+            android:background="#dddddd"/>
+
+    <!-- 收货地址 -->
+    <LinearLayout
+            android:id="@+id/ll_shopping_address"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30px"
+                android:textColor="#242424"
+                android:text="收货地址"/>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        <ImageView
+                android:layout_width="16px"
+                android:layout_height="25px"
+                android:src="@drawable/common_arrows"/>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dddddd"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="18px"
+            android:background="#dddddd"/>
+
+    <!-- 黑名单 -->
+    <LinearLayout
+            android:id="@+id/ll_black_list"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30px"
+                android:textColor="#242424"
+                android:text="黑名单"/>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        <ImageView
+                android:layout_width="16px"
+                android:layout_height="25px"
+                android:src="@drawable/common_arrows"/>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dddddd"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="18px"
+            android:background="#dddddd"/>
+
+
+    <!-- 清理缓存 -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30px"
+                android:textColor="#242424"
+                android:text="清理缓存"/>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30px"
+                android:textColor="@color/black"
+                android:text="1GB"/>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="30px"
+            android:background="#dddddd"/>
+
+    <!-- 关于我们 -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30px"
+                android:textColor="#242424"
+                android:text="关于我们"/>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        <ImageView
+                android:layout_width="16px"
+                android:layout_height="25px"
+                android:src="@drawable/common_arrows"/>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="30px"
+            android:background="#dddddd"/>
+    <!-- 服务协议 -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30px"
+                android:textColor="#242424"
+                android:text="服务协议"/>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        <ImageView
+                android:layout_width="16px"
+                android:layout_height="25px"
+                android:src="@drawable/common_arrows"/>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dddddd"/>
+
+    <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="match_parent"
+            android:layout_height="78px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="100px"
+            android:gravity="center"
+            android:textSize="30px"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_logout"
+            android:text="退出登录"/>
+
+</LinearLayout>

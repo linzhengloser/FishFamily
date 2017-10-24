@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#fafafafa"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/common_titile_bar"/>
+
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="56px"
+            android:layout_margin="16px"
+            android:background="@drawable/shape_my_fans_search"
+            >
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparency"
+                android:hint="搜索"
+                android:textSize="26px"
+                android:textColor="@color/black"
+                android:textColorHint="#b2b2b2"
+                android:drawablePadding="6dp"
+                android:drawableLeft="@drawable/my_fans_search"
+                android:layout_gravity="center"/>
+
+
+    </FrameLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_mine_fans"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>
