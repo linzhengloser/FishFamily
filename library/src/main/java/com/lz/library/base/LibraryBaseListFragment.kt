@@ -1,5 +1,7 @@
 package com.lz.library.base
 
+import android.view.View
+import com.lz.library.utils.RefreshListener
 import me.drakeet.multitype.Items
 import me.drakeet.multitype.MultiTypeAdapter
 
@@ -12,18 +14,31 @@ import me.drakeet.multitype.MultiTypeAdapter
  * version: 1.0
 </pre> *
  */
-abstract class LibraryBaseListFragment : LibraryBaseFragment() {
+abstract class LibraryBaseListFragment : LibraryBaseFragment(),RefreshListener {
 
-    protected var mAdapter: MultiTypeAdapter? = null
+    protected var mAdapter: MultiTypeAdapter = MultiTypeAdapter()
 
-    protected var mItems: Items? = null
+    protected var mItems: Items = Items()
+
+    protected var mPage: Int = 0
 
     protected abstract fun registerItemViewBinder()
 
     override fun initViewsAndEvents() {
-        mAdapter = MultiTypeAdapter()
-        mItems = Items()
         registerItemViewBinder()
-        mAdapter!!.items = mItems
+        mAdapter.items = mItems
     }
+
+    override fun onRefresh(view: View?) {
+        mPage = 1;
+        loadPageData(mPage)
+    }
+
+    override fun onLoadMore(view: View?) {
+        mPage++
+        loadPageData(mPage)
+    }
+
+    open fun loadPageData(page:Int = 1){}
+
 }

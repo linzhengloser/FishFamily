@@ -26,11 +26,10 @@ public class CallReceiver extends BroadcastReceiver {
         //call type
         String type = intent.getStringExtra("type");
         if ("video".equals(type)) {
-//            context.startActivity(new Intent(context, .class).
-//                    putExtra("username", from).putExtra("isComingCall", true).
-//                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            //视频呼入
         } else {
-            VoiceActivity.toActivity(context, from, true, true);
+            //语音呼入
+            VoiceActivity.toVoiceActivity(context, from, true, true);
         }
     }
 }

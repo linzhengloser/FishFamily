@@ -32,8 +32,8 @@ public class SelectTagActivity extends BaseListActivity {
     @Override
     protected void initViewsAndEvents() {
         super.initViewsAndEvents();
-        Utils.setTitle(this, "选择标签");
-        Utils.setMenuText(this, "保存");
+        Utils.INSTANCE.setTitle(this, "选择标签");
+        Utils.INSTANCE.setMenuText(this, "保存");
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
         gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override

@@ -6,7 +6,7 @@
               android:background="@color/white">
 
     <include
-            layout="@layout/common_titile_bar"
+            layout="@layout/common_title_bar"
             />
 
 

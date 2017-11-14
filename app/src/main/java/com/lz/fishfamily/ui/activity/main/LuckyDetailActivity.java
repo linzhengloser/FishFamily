@@ -8,8 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import com.lz.fishfamily.R;
 import com.lz.fishfamily.module.main.LuckyRecord;
 import com.lz.fishfamily.ui.base.BaseListActivity;
-import com.lz.fishfamily.ui.multitype.main.LuckyDetailTopItemViewBinder;
-import com.lz.fishfamily.ui.multitype.main.WeeklyLuckyItemViewBinder;
+import com.lz.fishfamily.ui.multitype.main.lucky.LuckyDetailTopItemViewBinder;
+import com.lz.fishfamily.ui.multitype.main.lucky.WeeklyLuckyItemViewBinder;
 import com.lz.fishfamily.utils.Utils;
 
 import butterknife.BindView;
@@ -31,7 +31,7 @@ public class LuckyDetailActivity extends BaseListActivity {
     @Override
     protected void initViewsAndEvents() {
         super.initViewsAndEvents();
-        Utils.setTitle(this,"每周抽奖");
+        Utils.INSTANCE.setTitle(this,"每周抽奖");
 
         rv_lucky_detail.setLayoutManager(new LinearLayoutManager(this));
 

@@ -6,7 +6,7 @@
               android:background="#fafafa">
 
     <include
-            layout="@layout/common_titile_bar"
+            layout="@layout/common_title_bar"
             />
 
     <android.support.v7.widget.RecyclerView

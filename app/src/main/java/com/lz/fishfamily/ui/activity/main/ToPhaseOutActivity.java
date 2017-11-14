@@ -10,7 +10,7 @@ import android.view.View;
 import com.lz.fishfamily.R;
 import com.lz.fishfamily.module.main.ToPhaseOut;
 import com.lz.fishfamily.ui.base.BaseListActivity;
-import com.lz.fishfamily.ui.multitype.LuckyToPhaseOutItemViewBinder;
+import com.lz.fishfamily.ui.multitype.main.lucky.LuckyToPhaseOutItemViewBinder;
 import com.lz.fishfamily.utils.Utils;
 import com.zhy.autolayout.utils.AutoUtils;
 
@@ -33,7 +33,7 @@ public class ToPhaseOutActivity extends BaseListActivity {
     @Override
     protected void initViewsAndEvents() {
         super.initViewsAndEvents();
-        Utils.setTitle(this, "往期揭晓");
+        Utils.INSTANCE.setTitle(this, "往期揭晓");
         rv_to_phase_out.setLayoutManager(new LinearLayoutManager(this));
         rv_to_phase_out.addItemDecoration(new RecyclerView.ItemDecoration() {
             @Override

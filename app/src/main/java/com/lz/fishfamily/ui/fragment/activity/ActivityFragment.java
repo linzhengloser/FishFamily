@@ -18,7 +18,7 @@ import com.lz.library.base.LibraryBaseFragment;
 public class ActivityFragment extends LibraryBaseFragment {
     @Override
     protected void initViewsAndEvents() {
-        Utils.setTitle(getView(), "最新活动");
+        Utils.INSTANCE.setTitle(getView(), "最新活动");
     }
 
     @Override

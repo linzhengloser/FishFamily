@@ -32,8 +32,8 @@ public class MyWalletActivity extends BaseListActivity {
     @Override
     protected void initViewsAndEvents() {
         super.initViewsAndEvents();
-        Utils.setTitle(this, "我的钱包");
-        Utils.setMenuText(this, "帮助");
+        Utils.INSTANCE.setTitle(this, "我的钱包");
+        Utils.INSTANCE.setMenuText(this, "帮助");
 
         rv_my_wallet.setLayoutManager(new LinearLayoutManager(this));
         rv_my_wallet.addItemDecoration(new PaddingItemDecoration().setPadding(30, 30));

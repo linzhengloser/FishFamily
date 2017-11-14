@@ -44,8 +44,8 @@ public class SubmitTextActivity extends BaseActivity {
     @Override
     protected void initViewsAndEvents() {
         mType = getIntent().getIntExtra(Constant.INTENT_KEY_TYPE, 1);
-        Utils.setTitle(this, mTitles[mType - 1]);
-        Utils.setMenuText(this, mMenuTexts[mType - 1]);
+        Utils.INSTANCE.setTitle(this, mTitles[mType - 1]);
+        Utils.INSTANCE.setMenuText(this, mMenuTexts[mType - 1]);
         et_submit_text.setHint(mHints[mType - 1]);
     }
 

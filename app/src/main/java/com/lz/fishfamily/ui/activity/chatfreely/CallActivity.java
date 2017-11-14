@@ -16,8 +16,6 @@ import com.hyphenate.EMError;
 import com.hyphenate.chat.EMCallManager;
 import com.hyphenate.chat.EMCallStateChangeListener;
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.chat.EMMessage;
-import com.hyphenate.chat.EMTextMessageBody;
 import com.hyphenate.exceptions.EMNoActiveCallException;
 import com.hyphenate.exceptions.EMServiceNotReadyException;
 import com.lz.fishfamily.Constant;
@@ -25,14 +23,12 @@ import com.lz.fishfamily.R;
 import com.lz.fishfamily.ui.base.BaseActivity;
 import com.lz.library.utils.ToastUtils;
 
-import java.util.UUID;
-
 /**
  * <pre>
  *     author : linzheng
  *     e-mail : 1007687534@qq.com
  *     time   : 2017/09/10
- *     desc   :
+ *     desc   : 语音通话 or 视频通话
  *     version: 1.0
  * </pre>
  */
@@ -44,7 +40,7 @@ public abstract class CallActivity extends BaseActivity implements EMCallStateCh
 
     public static final int CALL_STATE_REFUSED = 24;
 
-    public static final int CALL_STATE_BEREFUSED = 25;
+    public static final int CALL_STATE_BE_REFUSED = 25;
 
     public static final int CALL_STATE_UNANSWERED = 26;
 
@@ -100,7 +96,7 @@ public abstract class CallActivity extends BaseActivity implements EMCallStateCh
         sCallStateMap.put(CALL_STATE_CANCELLED, sTextArray[0]);
         sCallStateMap.put(CALL_STATE_NORMAL, sTextArray[1]);
         sCallStateMap.put(CALL_STATE_REFUSED, sTextArray[2]);
-        sCallStateMap.put(CALL_STATE_BEREFUSED, sTextArray[3]);
+        sCallStateMap.put(CALL_STATE_BE_REFUSED, sTextArray[3]);
         sCallStateMap.put(CALL_STATE_UNANSWERED, sTextArray[4]);
         sCallStateMap.put(CALL_STATE_OFFLINE, sTextArray[5]);
         sCallStateMap.put(CALL_STATE_NO_RESPONSE, sTextArray[6]);
@@ -162,7 +158,7 @@ public abstract class CallActivity extends BaseActivity implements EMCallStateCh
 
         //初始化声音
         mSoundPool = new SoundPool(1, AudioManager.STREAM_RING, 0);
-        mSoundPool.load(this, R.raw.em_outgoing, 1);
+        mOutgoing = mSoundPool.load(this, R.raw.em_outgoing, 1);
 
         //初始化铃声
         Uri ringUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
@@ -171,7 +167,6 @@ public abstract class CallActivity extends BaseActivity implements EMCallStateCh
         mRingtone = RingtoneManager.getRingtone(this, ringUri);
 
         EMClient.getInstance().callManager().addCallStateChangeListener(this);
-
     }
 
     @Override
@@ -274,12 +269,7 @@ public abstract class CallActivity extends BaseActivity implements EMCallStateCh
         }
     };
 
-    protected Runnable mTimeOutHangup = new Runnable() {
-        @Override
-        public void run() {
-            mHandler.sendEmptyMessage(MESSAGE_WHAT_END);
-        }
-    };
+    protected Runnable mTimeOutHangup = () -> mHandler.sendEmptyMessage(MESSAGE_WHAT_END);
 
 
     /**
@@ -303,7 +293,6 @@ public abstract class CallActivity extends BaseActivity implements EMCallStateCh
         try {
             mAudioManager.setMode(AudioManager.MODE_RINGTONE);
             mAudioManager.setSpeakerphoneOn(true);
-
             // play
             int id = mSoundPool.play(mOutgoing, // sound resource
                     0.3f, // left volume
@@ -350,34 +339,42 @@ public abstract class CallActivity extends BaseActivity implements EMCallStateCh
      * 保存呼叫记录消息
      */
     protected void saveCallRecord() {
-        EMMessage message = null;
-        EMTextMessageBody txtBody = null;
-        if (!mIsCall) { // outgoing call
-            message = EMMessage.createSendMessage(EMMessage.Type.TXT);
-            message.setTo(mUserId);
-        } else {
-            message = EMMessage.createReceiveMessage(EMMessage.Type.TXT);
-            message.setFrom(mUserId);
-        }
-
-        if (mCallType == 0)
-            message.setAttribute("is_voice_call", true);
-        else
-            message.setAttribute("is_video_call", true);
-
-        message.addBody(txtBody);
-        message.setMsgId(UUID.randomUUID().toString());
-        message.setStatus(EMMessage.Status.SUCCESS);
-
-        EMClient.getInstance().chatManager().saveMessage(message);
+//        EMMessage message = null;
+//        EMTextMessageBody txtBody = null;
+//        if (!mIsCall) { // outgoing call
+//            message = EMMessage.createSendMessage(EMMessage.Type.TXT);
+//            message.setTo(mUserId);
+//        } else {
+//            message = EMMessage.createReceiveMessage(EMMessage.Type.TXT);
+//            message.setFrom(mUserId);
+//        }
+//
+//        if (mCallType == 0)
+//            message.setAttribute("is_voice_call", true);
+//        else
+//            message.setAttribute("is_video_call", true);
+//
+//        message.addBody(txtBody);
+//        message.setMsgId(UUID.randomUUID().toString());
+//        message.setStatus(EMMessage.Status.SUCCESS);
+//
+//        EMClient.getInstance().chatManager().saveMessage(message);
     }
 
-    public static void toActivity(Context context, String userId, boolean isCall, boolean isNewTask) {
-        Intent intent = new Intent(context, VoiceActivity.class);
+    private static void toActivity(Context context, Class clazz, String userId, boolean isCall, boolean isNewTask) {
+        Intent intent = new Intent(context, clazz);
         intent.putExtra(Constant.Chat.INTENT_KEY_CHAT_USER_ID, userId);
         intent.putExtra(Constant.Chat.INTENT_KEY_IS_CALL, isCall);
         if (isNewTask) intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
+    }
+
+    public static void toVoiceActivity(Context context, String userId, boolean isCall, boolean isNewTask) {
+        toActivity(context, VoiceActivity.class, userId, isCall, isNewTask);
+    }
+
+    public static void toVideoActivity(Context context, String userId, boolean isCall, boolean isNewTask) {
+        toActivity(context, VideoActivity.class, userId, isCall, isNewTask);
     }
 
 }

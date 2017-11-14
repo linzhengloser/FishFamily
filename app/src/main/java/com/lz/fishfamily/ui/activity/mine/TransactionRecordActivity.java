@@ -61,7 +61,7 @@ public class TransactionRecordActivity extends BaseActivity {
     @Override
     protected void initViewsAndEvents() {
         mType = getIntent().getIntExtra(Constant.INTENT_KEY_TYPE,1);
-        Utils.setTitle(this, mType == TYPE_BUY ? "我买到的" : "我卖出的");
+        Utils.INSTANCE.setTitle(this, mType == TYPE_BUY ? "我买到的" : "我卖出的");
         CommonNavigator commonNavigator = new CommonNavigator(this);
         commonNavigator.setAdjustMode(true);
         commonNavigator.setAdapter(new CommonNavigatorAdapter() {

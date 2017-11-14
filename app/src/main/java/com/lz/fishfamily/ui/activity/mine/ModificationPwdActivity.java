@@ -19,8 +19,8 @@ import com.lz.fishfamily.utils.Utils;
 public class ModificationPwdActivity extends BaseActivity {
     @Override
     protected void initViewsAndEvents() {
-        Utils.setTitle(this, "修改密码");
-        Utils.setMenuText(this, "完成");
+        Utils.INSTANCE.setTitle(this, "修改密码");
+        Utils.INSTANCE.setMenuText(this, "完成");
     }
 
     @Override

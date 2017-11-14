@@ -16,7 +16,7 @@ import com.lz.fishfamily.utils.CacheUtils;
 import com.lz.fishfamily.utils.event.LoginEvent;
 import com.lz.library.utils.ToastUtils;
 import com.lz.fishfamily.utils.Utils;
-import com.lz.fishfamily.utils.rxjava.HandlerApiResultCosumer;
+import com.lz.fishfamily.utils.rxjava.HandlerApiResultConsumer;
 import com.lz.fishfamily.utils.rxjava.HandlerApiResultFunction;
 
 import org.greenrobot.eventbus.EventBus;
@@ -75,7 +75,7 @@ public class RegisterActivity extends BaseActivity {
         if (view.getId() == R.id.tv_login) {
             finish();
         } else if (view.getId() == R.id.tv_next) {
-            if (Utils.isEmpty(new String[]{"请输入手机号", "请输入密码", "请输入验证码"}, et_phone_number, et_pwd, et_validate_code)) {
+            if (Utils.INSTANCE.isEmpty(new String[]{"请输入手机号", "请输入密码", "请输入验证码"}, et_phone_number, et_pwd, et_validate_code)) {
                 if (mType.equals("register"))
                     register();
                 else
@@ -87,7 +87,7 @@ public class RegisterActivity extends BaseActivity {
             else
                 et_pwd.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
         } else {
-            if (Utils.isEmpty(new String[]{"请输入手机号"}, et_phone_number)) {
+            if (Utils.INSTANCE.isEmpty(new String[]{"请输入手机号"}, et_phone_number)) {
                 sendValidateCode();
             }
         }
@@ -97,58 +97,58 @@ public class RegisterActivity extends BaseActivity {
      * 找回密码
      */
     private void findPwd() {
-        showLoadingDialog();
+        showLoading();
         String tel = et_phone_number.getText().toString().trim();
         String pwd = et_pwd.getText().toString().trim();
         String validateCode = et_validate_code.getText().toString().trim();
         Api.create(LoginApi.class).findPwd(tel, pwd, validateCode)
                 .compose(bindToLifecycle())
-                .map(new HandlerApiResultFunction())
+                .map(new HandlerApiResultFunction(this))
                 .observeOn(AndroidSchedulers.mainThread())
-                .doFinally(() -> hidLoadingDialog())
+                .doFinally(() -> showSuccess())
                 .subscribe(s -> {
                     ToastUtils.showToast("密码修改成功");
                     MainActivity.toActivity(RegisterActivity.this);
-                }, new HandlerApiResultCosumer());
+                }, new HandlerApiResultConsumer());
     }
 
     /**
      * 注册
      */
     private void register() {
-        showLoadingDialog();
+        showLoading();
         String tel = et_phone_number.getText().toString().trim();
         String pwd = et_pwd.getText().toString().trim();
         String validateCode = et_validate_code.getText().toString().trim();
         Api.create(LoginApi.class).register(tel, pwd, validateCode)
                 .compose(bindToLifecycle())
-                .map(new HandlerApiResultFunction<>())
+                .map(new HandlerApiResultFunction<>(this))
                 .observeOn(AndroidSchedulers.mainThread())
-                .doFinally(() -> hidLoadingDialog())
+                .doFinally(() -> showSuccess())
                 .subscribe(s -> {
                     ToastUtils.showToast("注册成功");
                     CacheUtils.saveToken(s.getToken());
                     CacheUtils.saveUserId(s.getUserInfo_ID());
                     EventBus.getDefault().post(new LoginEvent(LoginEvent.EVENT_TYPE_GET_USER_INFO));
                     CompleteProfileActivity.toActivity(RegisterActivity.this, s.getUserInfo_ID());
-                }, new HandlerApiResultCosumer());
+                }, new HandlerApiResultConsumer());
     }
 
     /**
      * 发送验证码
      */
     private void sendValidateCode() {
-        showLoadingDialog();
+        showLoading();
         String tel = et_phone_number.getText().toString().trim();
         Api.create(LoginApi.class).sendValidateCode(tel)
                 .compose(bindToLifecycle())
-                .map(new HandlerApiResultFunction<>())
-                .doFinally(() -> hidLoadingDialog())
+                .map(new HandlerApiResultFunction<>(this))
+                .doFinally(() -> showSuccess())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(s -> {
                     ToastUtils.showToast("验证码已发送,注意查收");
                     startCountDown();
-                }, new HandlerApiResultCosumer());
+                }, new HandlerApiResultConsumer());
 
     }
 

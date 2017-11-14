@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">鱼友之家</string>
-
-
-
     <string name="im_message_type_image">[图片]</string>
     <string name="im_message_type_location_recv">[%1$s的位置]</string>
     <string name="im_message_type_location_sent">[我的位置]</string>

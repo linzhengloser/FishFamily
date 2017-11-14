@@ -16,6 +16,7 @@
             android:background="#eeeeee"/>
 
     <LinearLayout
+            android:id="@+id/ll_like_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10px">
@@ -25,68 +26,68 @@
                 android:layout_height="60px"
                 android:layout_marginRight="10px"
                 app:layout_auto_baseheight="width"
-                android:src="@drawable/default_avatar"/>
+                android:visibility="gone"/>
 
         <ImageView
                 android:layout_width="60px"
                 android:layout_height="60px"
                 android:layout_marginRight="10px"
                 app:layout_auto_baseheight="width"
-                android:src="@drawable/default_avatar"/>
+                android:visibility="gone"/>
 
         <ImageView
                 android:layout_width="60px"
                 android:layout_height="60px"
                 android:layout_marginRight="10px"
                 app:layout_auto_baseheight="width"
-                android:src="@drawable/default_avatar"/>
+                android:visibility="gone"/>
 
         <ImageView
                 android:layout_width="60px"
                 android:layout_height="60px"
                 android:layout_marginRight="10px"
                 app:layout_auto_baseheight="width"
-                android:src="@drawable/default_avatar"/>
+                android:visibility="gone"/>
 
         <ImageView
                 android:layout_width="60px"
                 android:layout_height="60px"
                 android:layout_marginRight="10px"
                 app:layout_auto_baseheight="width"
-                android:src="@drawable/default_avatar"/>
+                android:visibility="gone"/>
 
         <ImageView
                 android:layout_width="60px"
                 android:layout_height="60px"
                 android:layout_marginRight="10px"
-                android:src="@drawable/default_avatar"/>
-
-        <ImageView
-                android:layout_width="60px"
-                android:layout_height="60px"
-                android:layout_marginRight="10px"
-                app:layout_auto_baseheight="width"
-                android:src="@drawable/default_avatar"/>
+                android:visibility="gone"/>
 
         <ImageView
                 android:layout_width="60px"
                 android:layout_height="60px"
                 android:layout_marginRight="10px"
                 app:layout_auto_baseheight="width"
-                android:src="@drawable/default_avatar"/>
+                android:visibility="gone"/>
 
         <ImageView
                 android:layout_width="60px"
                 android:layout_height="60px"
                 android:layout_marginRight="10px"
                 app:layout_auto_baseheight="width"
-                android:src="@drawable/default_avatar"/>
+                android:visibility="gone"/>
+
+        <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_marginRight="10px"
+                app:layout_auto_baseheight="width"
+                android:visibility="gone"/>
 
         <ImageView
                 android:layout_width="60px"
                 android:layout_height="60px"
                 app:layout_auto_baseheight="width"
-                android:src="@drawable/default_avatar"/>
+                android:visibility="gone"/>
 
     </LinearLayout>
 

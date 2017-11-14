@@ -139,7 +139,7 @@
 
         <!-- 视屏聊天 -->
         <LinearLayout
-                android:id="@+id/ll_chat_vidoe"
+                android:id="@+id/ll_chat_video_voice"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

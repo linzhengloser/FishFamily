@@ -1,5 +1,7 @@
 package com.lz.fishfamily.ui.fragment.chatfreely;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
@@ -28,6 +30,7 @@ import com.lz.fishfamily.im.multitype.ChatImageItemViewBinder;
 import com.lz.fishfamily.im.multitype.ChatTextItemViewBinder;
 import com.lz.fishfamily.im.multitype.ChatUnknowTypeItemViewBinder;
 import com.lz.fishfamily.im.multitype.ChatVoiceItemViewBinder;
+import com.lz.fishfamily.ui.activity.chatfreely.VoiceActivity;
 import com.lz.fishfamily.ui.view.RecordVoiceView;
 import com.lz.fishfamily.ui.view.VoiceView;
 import com.lz.fishfamily.utils.event.ChatEvent;
@@ -147,13 +150,13 @@ public class ChatFragment extends LibraryBaseListFragment implements SwipeRefres
     @Override
     protected void registerItemViewBinder() {
         getMAdapter().register(EMMessage.class)
-                .to(new ChatTextItemViewBinder(), new ChatImageItemViewBinder(),new ChatVoiceItemViewBinder() ,new ChatUnknowTypeItemViewBinder())
+                .to(new ChatTextItemViewBinder(), new ChatImageItemViewBinder(), new ChatVoiceItemViewBinder(), new ChatUnknowTypeItemViewBinder())
                 .withClassLinker(message -> {
                     if (message.getType() == EMMessage.Type.TXT) {
                         return ChatTextItemViewBinder.class;
                     } else if (message.getType() == EMMessage.Type.IMAGE) {
                         return ChatImageItemViewBinder.class;
-                    }else if(message.getType() == EMMessage.Type.VOICE){
+                    } else if (message.getType() == EMMessage.Type.VOICE) {
                         return ChatVoiceItemViewBinder.class;
                     }
                     return ChatUnknowTypeItemViewBinder.class;
@@ -235,7 +238,7 @@ public class ChatFragment extends LibraryBaseListFragment implements SwipeRefres
      */
     private void refreshList() {
         getMItems().clear();
-        List<EMMessage> list = mConversation .getAllMessages();
+        List<EMMessage> list = mConversation.getAllMessages();
         getMItems().addAll(list);
         getMAdapter().notifyDataSetChanged();
         mConversation.markAllMessagesAsRead();
@@ -286,7 +289,7 @@ public class ChatFragment extends LibraryBaseListFragment implements SwipeRefres
 
     }
 
-    @OnClick({R.id.iv_menu, R.id.iv_expression, R.id.ll_photo, R.id.iv_voice})
+    @OnClick({R.id.iv_menu, R.id.iv_expression, R.id.ll_photo, R.id.iv_voice, R.id.ll_chat_video_voice})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_menu:
@@ -305,6 +308,10 @@ public class ChatFragment extends LibraryBaseListFragment implements SwipeRefres
                 ll_record_voice.setVisibility(ll_record_voice.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
                 ((ImageView) view).setImageResource(ll_record_voice.getVisibility() == View.VISIBLE ? R.drawable.chat_voice_selected : R.drawable.chat_voice_unselected);
                 break;
+            //语音 or 视频 聊天
+            case R.id.ll_chat_video_voice:
+                showVoiceVideoDialog();
+                break;
         }
     }
 
@@ -318,6 +325,24 @@ public class ChatFragment extends LibraryBaseListFragment implements SwipeRefres
                 sendMessage(MessageUtils.createImageMessage(medias.get(0).getPath(), mChatUserId));
             }
         }
+    }
+
+    private Dialog mVoiceVideoDialog;
+
+    private void showVoiceVideoDialog() {
+        if (mVoiceVideoDialog == null) {
+            mVoiceVideoDialog = new AlertDialog.Builder(getContext())
+                    .setItems(new String[]{"语音聊天", "视频聊天"}, (dialog, which) -> {
+                        if (which == 0) {
+                            VoiceActivity.toVoiceActivity(getContext(), mChatUserId, false, false);
+                        } else {
+
+                        }
+                        dialog.dismiss();
+                    })
+                    .create();
+        }
+        mVoiceVideoDialog.show();
     }
 
     /**

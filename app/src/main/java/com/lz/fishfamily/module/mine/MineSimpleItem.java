@@ -19,7 +19,7 @@ public class MineSimpleItem {
 
     public static final int TYPE_TRANSACTION_RECORD = 2;
 
-    public static final int TYPE_MY_SHOPPINT_CAR = 3;
+    public static final int TYPE_MY_SHOPPING_CAR = 3;
 
     public static final int TYPE_TASK_CENTER = 4;
 
@@ -33,18 +33,21 @@ public class MineSimpleItem {
 
     public static final int TYPE_MERCHANT_ENTER = 9;
 
+    public static final int TYPE_SHOP_ORDER = 10;
+
     private static SparseArray<Integer> sTypeMap = new SparseArray<>(9);
 
     static {
         sTypeMap.put(R.drawable.mine_simple_item_wallet, TYPE_MY_WALLET);
         sTypeMap.put(R.drawable.mine_simple_item_transaction_record, TYPE_TRANSACTION_RECORD);
-        sTypeMap.put(R.drawable.mine_simple_item_shopping_cart, TYPE_MY_SHOPPINT_CAR);
+        sTypeMap.put(R.drawable.mine_simple_item_shopping_cart, TYPE_MY_SHOPPING_CAR);
         sTypeMap.put(R.drawable.mine_simple_item_task_center, TYPE_TASK_CENTER);
         sTypeMap.put(R.drawable.mine_simple_item_draft_box, TYPE_DRAFT_BOX);
         sTypeMap.put(R.drawable.mine_simple_item_share, TYPE_SHARE);
         sTypeMap.put(R.drawable.mine_simple_item_feedback, TYPE_FEEDBACK);
         sTypeMap.put(R.drawable.mine_simple_item_setting, TYPE_SETTING);
         sTypeMap.put(R.drawable.mine_simple_item_merchant_enter, TYPE_MERCHANT_ENTER);
+        sTypeMap.put(R.drawable.mine_simple_item_shop_order,TYPE_SHOP_ORDER);
     }
 
     private int type;

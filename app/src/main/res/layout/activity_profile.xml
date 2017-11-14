@@ -5,7 +5,7 @@
               android:orientation="vertical"
               android:background="#fafafa">
 
-    <include layout="@layout/common_titile_bar"/>
+    <include layout="@layout/common_title_bar"/>
 
     <View
             android:layout_width="match_parent"
@@ -23,6 +23,7 @@
             android:background="@color/white">
 
         <ImageView
+                android:id="@+id/iv_avatar"
                 android:layout_width="100px"
                 android:layout_height="100px"
                 android:src="@drawable/default_avatar"/>
@@ -131,12 +132,12 @@
                     android:text="昵称"/>
 
             <TextView
+                    android:id="@+id/tv_nick_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50px"
                     android:textSize="30px"
-                    android:textColor="@color/black"
-                    android:text="大佬的昵称"/>
+                    android:textColor="@color/black"/>
 
 
         </LinearLayout>
@@ -165,12 +166,12 @@
                     android:text="性别"/>
 
             <TextView
+                    android:id="@+id/tv_gender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50px"
                     android:textSize="30px"
-                    android:textColor="@color/black"
-                    android:text="男"/>
+                    android:textColor="@color/black"/>
 
             <View
                     android:layout_width="0dp"
@@ -210,12 +211,12 @@
                     android:text="地区"/>
 
             <TextView
+                    android:id="@+id/tv_district"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50px"
                     android:textSize="30px"
-                    android:textColor="@color/black"
-                    android:text="湖北省武汉市"/>
+                    android:textColor="@color/black"/>
 
             <View
                     android:layout_width="0dp"
@@ -257,13 +258,13 @@
                     android:text="简介"/>
 
             <TextView
+                    android:id="@+id/tv_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50px"
                     android:maxWidth="510px"
                     android:textSize="30px"
-                    android:textColor="@color/black"
-                    android:text="天降大任于斯人也,必先苦其心志、劳其筋骨、饿其体肤、空乏其身、增益其所不能"/>
+                    android:textColor="@color/black"/>
 
             <View
                     android:layout_width="0dp"
@@ -304,12 +305,12 @@
                     android:text="标签"/>
 
             <TextView
+                    android:id="@+id/tv_tag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50px"
                     android:textSize="30px"
-                    android:textColor="@color/black"
-                    android:text="准备养鱼,鲨鱼"/>
+                    android:textColor="@color/black"/>
 
             <View
                     android:layout_width="0dp"
@@ -360,12 +361,12 @@
                     android:text="鱼豆"/>
 
             <TextView
+                    android:id="@+id/tv_fish_money"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50px"
                     android:textSize="30px"
-                    android:textColor="@color/black"
-                    android:text="23333"/>
+                    android:textColor="@color/black"/>
 
         </LinearLayout>
 
@@ -391,10 +392,10 @@
                     android:text="等级"/>
 
             <ImageView
+                    android:id="@+id/iv_level"
                     android:layout_width="77px"
                     android:layout_height="32px"
-                    android:layout_marginLeft="50px"
-                    android:src="@drawable/mine_level_six"/>
+                    android:layout_marginLeft="50px"/>
 
         </LinearLayout>
 

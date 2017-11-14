@@ -53,7 +53,7 @@ abstract class LibraryBaseActivity : RxAppCompatActivity(), BaseView {
         ButterKnife.bind(this)
     }
 
-    override fun showLoadingDialog() {
+    override fun showLoading() {
         if (mProgressDialog == null) {
             mProgressDialog = ProgressDialog(this)
             mProgressDialog!!.setTitle("加载中...")
@@ -61,11 +61,15 @@ abstract class LibraryBaseActivity : RxAppCompatActivity(), BaseView {
         mProgressDialog!!.show()
     }
 
-    override fun hidLoadingDialog() {
+    override fun showSuccess() {
         if (mProgressDialog != null) mProgressDialog!!.dismiss()
     }
 
-    override fun showErrorView(msg: String, clickListener: View.OnClickListener) {
+    override fun showError(msg: String, clickListener: View.OnClickListener) {
+
+    }
+
+    override fun showEmpty() {
 
     }
 

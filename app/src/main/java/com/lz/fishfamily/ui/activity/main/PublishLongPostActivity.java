@@ -19,7 +19,7 @@ import com.lz.fishfamily.utils.Utils;
 public class PublishLongPostActivity extends BaseActivity {
     @Override
     protected void initViewsAndEvents() {
-        Utils.setMenuText(this,"发布");
+        Utils.INSTANCE.setMenuText(this,"发布");
     }
 
     @Override

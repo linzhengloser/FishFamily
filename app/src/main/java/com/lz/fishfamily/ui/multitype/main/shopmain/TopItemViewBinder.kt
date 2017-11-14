@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.lz.fishfamily.R
-import com.lz.fishfamily.module.main.Shop
+import com.lz.fishfamily.module.main.shop.Shop
 import com.lz.fishfamily.utils.event.MainEvent
 import com.lz.library.base.BaseViewHolder
 import kotlinx.android.synthetic.main.item_main_shop_main_top.view.*

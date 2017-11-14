@@ -29,7 +29,7 @@ import com.lz.fishfamily.utils.UserManager;
 import com.lz.fishfamily.utils.event.ChatEvent;
 import com.lz.fishfamily.utils.event.LoginEvent;
 import com.lz.fishfamily.utils.im.SimpleEMMEssageListListener;
-import com.lz.fishfamily.utils.rxjava.HandlerApiResultCosumer;
+import com.lz.fishfamily.utils.rxjava.HandlerApiResultConsumer;
 import com.lz.fishfamily.utils.rxjava.HandlerApiResultFunction;
 import com.lz.library.base.BaseViewPagerAdapter;
 import com.lz.library.utils.ToastUtils;
@@ -94,7 +94,7 @@ public class MainActivity extends BaseActivity {
         mFragmentList.add(MainFragment.newInstance());
         mFragmentList.add(ChatFreelyFragment.newInstance());
         mFragmentList.add(ActivityFragment.newInstance());
-        mFragmentList.add(MineFragment.newInstance());
+        mFragmentList.add(MineFragment.Companion.newInstance());
         vp_main.setOffscreenPageLimit(mFragmentList.size());
         vp_main.setAdapter(new BaseViewPagerAdapter(getSupportFragmentManager(), mFragmentList));
         changeTab(0);
@@ -190,9 +190,9 @@ public class MainActivity extends BaseActivity {
         if (event.getEventType() == LoginEvent.EVENT_TYPE_GET_USER_INFO) {
             Api.create(UserApi.class).getUserInfo(CacheUtils.getUserId())
                     .compose(bindToLifecycle())
-                    .map(new HandlerApiResultFunction<>())
+                    .map(new HandlerApiResultFunction<>(this))
                     .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(user -> UserManager.saveUserJson(user), new HandlerApiResultCosumer());
+                    .subscribe(user -> UserManager.saveUserJson(user), new HandlerApiResultConsumer());
 
         }
     }

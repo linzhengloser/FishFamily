@@ -11,8 +11,8 @@ import com.lz.fishfamily.module.main.PostComment;
 import com.lz.fishfamily.module.mine.Post;
 import com.lz.fishfamily.ui.base.BaseListActivity;
 import com.lz.fishfamily.ui.dialog.ShareDialogFragment;
-import com.lz.fishfamily.ui.multitype.main.PostDetailCommentItemViewBinder;
-import com.lz.fishfamily.ui.multitype.main.PostDetailItemViewBinder;
+import com.lz.fishfamily.ui.multitype.main.post.PostDetailCommentItemViewBinder;
+import com.lz.fishfamily.ui.multitype.main.post.PostDetailItemViewBinder;
 import com.lz.fishfamily.utils.Utils;
 
 import butterknife.BindView;
@@ -43,8 +43,8 @@ public class PostDetailActivity extends BaseListActivity {
     @Override
     protected void initViewsAndEvents() {
         super.initViewsAndEvents();
-        Utils.setTitle(this, "文章详情");
-        Utils.visibleMenuIcon(this);
+        Utils.INSTANCE.setTitle(this, "文章详情");
+        Utils.INSTANCE.visibleMenuIcon(this);
         getMItems().add(new Post());
         for (int i = 0; i < 20; i++) {
             getMItems().add(new PostComment());

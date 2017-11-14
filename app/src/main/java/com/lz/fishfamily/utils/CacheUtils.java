@@ -37,7 +37,7 @@ public class CacheUtils {
         } else if (value instanceof Boolean) {
             editor.putBoolean(key, (Boolean) value);
         }
-        editor.commit();
+        editor.apply();
     }
 
     public static String getString(String key) {

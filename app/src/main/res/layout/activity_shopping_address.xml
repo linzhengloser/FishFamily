@@ -6,14 +6,13 @@
 
 
     <include
-            layout="@layout/common_titile_bar"
+            layout="@layout/common_title_bar"
             />
 
 
     <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_shoppint_address"
+            android:id="@+id/rv_shopping_address"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
-
 
 </LinearLayout>

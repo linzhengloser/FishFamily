@@ -34,7 +34,7 @@ public class TagItemViewBinder extends ItemViewBinder<Tag, TagItemViewBinder.Tag
     @Override
     protected void onBindViewHolder(@NonNull TagViewHolder holder, @NonNull Tag item) {
         holder.tv_name.setText(item.getName());
-        holder.v_delete.setVisibility(Utils.getVisibilityByBoolean(item.isShouldDelete()));
+        holder.v_delete.setVisibility(Utils.INSTANCE.getVisibilityByBoolean(item.isShouldDelete()));
     }
 
     static class TagViewHolder extends BaseViewHolder {

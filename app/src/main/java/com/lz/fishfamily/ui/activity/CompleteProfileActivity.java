@@ -22,14 +22,18 @@ import com.bilibili.boxing_impl.ui.BoxingActivity;
 import com.lz.fishfamily.Constant;
 import com.lz.fishfamily.R;
 import com.lz.fishfamily.api.Api;
+import com.lz.fishfamily.api.CommodityApi;
 import com.lz.fishfamily.api.LoginApi;
-import com.lz.fishfamily.module.FishCategory;
+import com.lz.fishfamily.api.ShopApi;
+import com.lz.fishfamily.module.FishFarmCategory;
+import com.lz.fishfamily.module.main.commodity.Commodity;
+import com.lz.fishfamily.module.main.shop.Shop;
 import com.lz.fishfamily.ui.MainActivity;
 import com.lz.fishfamily.ui.base.BaseActivity;
-import com.lz.fishfamily.ui.multitype.FishCategoryItemViewBinder;
+import com.lz.fishfamily.ui.multitype.FishFarmCategoryItemViewBinder;
 import com.lz.fishfamily.utils.event.LoginEvent;
 import com.lz.fishfamily.utils.glide.GlideApp;
-import com.lz.fishfamily.utils.rxjava.HandlerApiResultCosumer;
+import com.lz.fishfamily.utils.rxjava.HandlerApiResultConsumer;
 import com.lz.fishfamily.utils.rxjava.HandlerApiResultFunction;
 import com.lz.library.utils.BitmapUtils;
 import com.lz.library.utils.ToastUtils;
@@ -45,6 +49,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.BiFunction;
 import me.drakeet.multitype.Items;
 import me.drakeet.multitype.MultiTypeAdapter;
 
@@ -107,7 +112,7 @@ public class CompleteProfileActivity extends BaseActivity {
         mExperienceItems = new Items();
         mCategoryItems = new Items();
         mAdapter = new MultiTypeAdapter();
-        mAdapter.register(FishCategory.class, new FishCategoryItemViewBinder());
+        mAdapter.register(FishFarmCategory.class, new FishFarmCategoryItemViewBinder());
         rv_fish_experience_category.setLayoutManager(new GridLayoutManager(this, 3));
         rv_fish_experience_category.setAdapter(mAdapter);
         mAdapter.setItems(mExperienceItems);
@@ -140,42 +145,50 @@ public class CompleteProfileActivity extends BaseActivity {
      * 完善个人信息
      */
     private void completeProfile() {
-        showLoadingDialog();
+        showLoading();
         String userNickname = et_nick_name.getText().toString().trim();
-        StringBuffer category = new StringBuffer(((FishCategory) mExperienceItems.get(mCurrentSelectedExperiencePosition)).getFishCategory_ID());
+        StringBuffer category = new StringBuffer(((FishFarmCategory) mExperienceItems.get(mCurrentSelectedExperiencePosition)).getFishCategory_ID());
         if (!mCurrentSelectedCategoryPositions.isEmpty()) category.append(",");
         for (int i = 0; i < mCurrentSelectedCategoryPositions.size(); i++) {
-            category.append(((FishCategory) mCategoryItems.get(mCurrentSelectedCategoryPositions.get(i))).getFishCategory_ID());
+            category.append(((FishFarmCategory) mCategoryItems.get(mCurrentSelectedCategoryPositions.get(i))).getFishCategory_ID());
             if (i != mCurrentSelectedCategoryPositions.size() - 1) category.append(",");
         }
         Api.create(LoginApi.class).perfectUserInfo(userId, userNickname, category.toString(), mAvatarBase64)
                 .compose(bindToLifecycle())
-                .map(new HandlerApiResultFunction<>())
+                .map(new HandlerApiResultFunction<>(this))
                 .observeOn(AndroidSchedulers.mainThread())
-                .doFinally(() -> hidLoadingDialog())
+                .doFinally(() -> showSuccess())
                 .subscribe(s -> {
                     ToastUtils.showToast("完善个人资料成功.");
                     MainActivity.toActivity(CompleteProfileActivity.this);
-                }, new HandlerApiResultCosumer());
+                }, new HandlerApiResultConsumer());
     }
 
     /**
      * 获取养鱼经验和养鱼类型
      */
     private void getExperienceAndCategory() {
-        showLoadingDialog();
-        Observable.zip(Api.create(LoginApi.class).getFishCategoryList(0).map(new HandlerApiResultFunction<>()), Api.create(LoginApi.class).getFishCategoryList(1).map(new HandlerApiResultFunction<>()),
+
+        Observable<List<Shop>> shopObservable = Api.create(ShopApi.class).getShop("","","",1,1)
+                .map(response -> response.getResultdata());
+        Observable<List<Commodity>> commodityObservable = Api.create(CommodityApi.class).getCommodity("","","",1,1)
+                .map(response -> response.getResultdata());;
+        Observable.zip(shopObservable, commodityObservable, (BiFunction<List<Shop>, List<Commodity>, Items>) (shops, commodities) -> null);
+
+
+        showLoading();
+        Observable.zip(Api.create(LoginApi.class).getFishCategoryList(0).map(new HandlerApiResultFunction<>(this)), Api.create(LoginApi.class).getFishCategoryList(1).map(new HandlerApiResultFunction<>(this)),
                 (categories, categories2) -> {
-                    List<FishCategory> list = new ArrayList<>();
+                    List<FishFarmCategory> list = new ArrayList<>();
                     list.addAll(categories);
                     list.addAll(categories2);
                     return list;
                 })
                 .compose(bindToLifecycle())
                 .observeOn(AndroidSchedulers.mainThread())
-                .doFinally(() -> hidLoadingDialog())
+                .doFinally(() -> showSuccess())
                 .subscribe(categories -> {
-                    for (FishCategory category : categories) {
+                    for (FishFarmCategory category : categories) {
                         if (category.getFishCategory_Type() == 0) {
                             mExperienceItems.add(category);
                         } else {
@@ -183,7 +196,7 @@ public class CompleteProfileActivity extends BaseActivity {
                         }
                     }
                     mAdapter.notifyDataSetChanged();
-                }, new HandlerApiResultCosumer());
+                }, new HandlerApiResultConsumer());
     }
 
     public boolean validate() {
@@ -250,13 +263,13 @@ public class CompleteProfileActivity extends BaseActivity {
         if (event.getEventType() == LoginEvent.EVENT_TYPE_FISH_EXPERIENCE_SELECTED) {
             //养鱼经验被
             if (mCurrentSelectedExperiencePosition != -1)
-                ((FishCategory) mExperienceItems.get(mCurrentSelectedExperiencePosition)).setSelected(false);
+                ((FishFarmCategory) mExperienceItems.get(mCurrentSelectedExperiencePosition)).setSelected(false);
             mCurrentSelectedExperiencePosition = event.getData();
-            ((FishCategory) mExperienceItems.get(mCurrentSelectedExperiencePosition)).setSelected(true);
+            ((FishFarmCategory) mExperienceItems.get(mCurrentSelectedExperiencePosition)).setSelected(true);
         } else if (event.getEventType() == LoginEvent.EVENT_TYPE_FISH_CATEGORY_SELECTED) {
-            FishCategory category = (FishCategory) mCategoryItems.get(event.getData());
+            FishFarmCategory category = (FishFarmCategory) mCategoryItems.get(event.getData());
             if (!mCurrentSelectedCategoryPositions.contains(event.getData())) {
-                if(mCurrentSelectedCategoryPositions.size() == 6) {
+                if (mCurrentSelectedCategoryPositions.size() == 6) {
                     ToastUtils.showToast("最多只能选着6种养鱼类型");
                     return;
                 }

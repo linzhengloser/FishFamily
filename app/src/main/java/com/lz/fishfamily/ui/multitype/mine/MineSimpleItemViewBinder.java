@@ -39,9 +39,9 @@ public class MineSimpleItemViewBinder extends ItemViewBinder<MineSimpleItem, Min
     protected void onBindViewHolder(@NonNull MineSimpleViewHolder holder, @NonNull MineSimpleItem item) {
         holder.iv_item_mine_simple_item_icon.setImageResource(item.getIcon());
         holder.tv_item_mine_simple_item_desc.setText(item.getDesc());
-        holder.tv_item_mine_simple_item_notification_number.setVisibility(Utils.getVisibilityByBoolean(item.isNeedNotificationNumber()));
-        holder.tv_item_mine_simple_item_arrows.setVisibility(Utils.getVisibilityByBoolean(item.isNeedArrows()));
-        holder.v_item_mine_simple_item_line.setVisibility(Utils.getVisibilityByBoolean(item.isNeedLine()));
+        holder.tv_item_mine_simple_item_notification_number.setVisibility(Utils.INSTANCE.getVisibilityByBoolean(item.isNeedNotificationNumber()));
+        holder.tv_item_mine_simple_item_arrows.setVisibility(Utils.INSTANCE.getVisibilityByBoolean(item.isNeedArrows()));
+        holder.v_item_mine_simple_item_line.setVisibility(Utils.INSTANCE.getVisibilityByBoolean(item.isNeedLine()));
         holder.itemView.setOnClickListener(view -> EventBus.getDefault().post(new LoginEvent(item.getType())));
     }
 

@@ -6,8 +6,8 @@ import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.lz.fishfamily.R
-import com.lz.fishfamily.module.main.Commodity
-import com.lz.fishfamily.module.main.Shop
+import com.lz.fishfamily.module.main.commodity.Commodity
+import com.lz.fishfamily.module.main.shop.Shop
 import com.lz.fishfamily.setTranslucentStatus
 import com.lz.fishfamily.ui.base.BaseListActivity
 import com.lz.fishfamily.ui.multitype.main.shopmain.CommodityGridItemViewBinder

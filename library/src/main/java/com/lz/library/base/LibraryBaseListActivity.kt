@@ -33,9 +33,14 @@ abstract class LibraryBaseListActivity : LibraryBaseActivity(), RefreshListener 
 
     override fun onRefresh(view: View) {
         mPage = 1
+        mItems.clear()
+        loadPageData(mPage)
     }
 
     override fun onLoadMore(view: View) {
         mPage++
+        loadPageData(mPage)
     }
+
+    open fun loadPageData(page:Int = 1){}
 }

@@ -3,8 +3,6 @@ package com.lz.fishfamily.api;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import com.lz.fishfamily.api.interceptor.TokenInteceptor;
-
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.schedulers.Schedulers;
@@ -27,7 +25,7 @@ public class Api {
 
     public static final String BASE_URL = "http://fapi.whmnx.com/api/";
 
-    public static final String DEFAULT_TOKTEN = "88888888888888888888888888888888";
+    public static final String DEFAULT_TOKEN = "88888888888888888888888888888888";
 
     private static Retrofit sRetrofit;
 
@@ -71,8 +69,8 @@ public class Api {
                     .readTimeout(1, TimeUnit.MINUTES)
                     .writeTimeout(1, TimeUnit.MINUTES)
                     .addInterceptor(logging)
-                    .addInterceptor(new TokenInteceptor())
                     .build();
+//            .addInterceptor(new TokenInterceptor())
         }
         return sOkHttpClient;
     }

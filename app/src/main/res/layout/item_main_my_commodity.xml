@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="300px"
+              android:paddingLeft="30px"
+              android:paddingRight="30px"
+              android:paddingTop="30px"
+              android:orientation="vertical"
+              android:background="@color/white">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:layout_width="180px"
+                android:layout_height="180px"
+                app:layout_auto_basewidth="height"
+                android:src="@drawable/default_avatar"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="20px"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:textColor="@color/black"
+                    android:text="新手教学，养鱼小知识"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10px"
+                    android:text="糖醋鱼，红烧鱼，酸菜鱼，美人鱼。糖醋鱼，红烧鱼，酸菜鱼，美人鱼。"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40px"
+                    android:textColor="#fa0f41"
+                    android:text="¥300.00"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="20px"
+            android:background="#dddddd"
+            />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="24px"
+                android:drawableLeft="@drawable/common_like_unselected"
+                android:drawablePadding="7dp"
+                android:textColor="#999999"
+                android:text="2333"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40px"
+                android:gravity="center_vertical"
+                android:textSize="24px"
+                android:drawablePadding="7dp"
+                android:drawableLeft="@drawable/common_comment"
+                android:textColor="#999999"
+                android:text="2333"/>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+
+        <TextView
+                android:layout_width="90px"
+                android:layout_height="52px"
+                android:gravity="center"
+                android:background="@drawable/shape_main_my_commodity_btn_bg"
+                android:textSize="26px"
+                android:textColor="#999999"
+                android:text="置顶"/>
+
+        <TextView
+                android:layout_width="130px"
+                android:layout_height="52px"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:gravity="center"
+                android:background="@drawable/shape_main_my_commodity_btn_bg"
+                android:textSize="26px"
+                android:textColor="#999999"
+                android:text="编辑商品"/>
+
+        <TextView
+                android:layout_width="130px"
+                android:layout_height="52px"
+                android:gravity="center"
+                android:background="@drawable/shape_main_my_commodity_btn_bg"
+                android:textSize="26px"
+                android:textColor="#999999"
+                android:text="下架商品"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

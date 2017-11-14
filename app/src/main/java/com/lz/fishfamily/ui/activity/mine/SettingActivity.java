@@ -23,7 +23,7 @@ public class SettingActivity extends BaseActivity {
 
     @Override
     protected void initViewsAndEvents() {
-        Utils.setTitle(this, "设置");
+        Utils.INSTANCE.setTitle(this, "设置");
     }
 
     @Override
@@ -36,9 +36,9 @@ public class SettingActivity extends BaseActivity {
         if (view.getId() == R.id.ll_modification_pwd) {
             ModificationPwdActivity.toActivity(this);
         } else if (view.getId() == R.id.ll_shopping_address) {
-            ShoppingAddressActivity.toActivity(this);
+            ShoppingAddressActivity.Companion.toActivity(this);
         }else if(view.getId() == R.id.ll_black_list){
-            BlackListActivity.toActivity(this);
+            BlackListActivity.Companion.toActivity(this);
         }else if(view.getId() == R.id.tv_logout){
             //退出登录
         }

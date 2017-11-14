@@ -13,10 +13,12 @@ import android.view.View
  */
 interface BaseView {
 
-    fun showLoadingDialog()
+    fun showLoading()
 
-    fun hidLoadingDialog()
+    fun showSuccess()
 
-    fun showErrorView(msg: String, clickListener: View.OnClickListener)
+    fun showError(msg: String, clickListener: View.OnClickListener)
+
+    fun showEmpty()
 
 }

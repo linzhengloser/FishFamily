@@ -28,4 +28,5 @@ abstract class BaseListActivity : LibraryBaseListActivity() {
         super.onResume()
         IMNotifier.getInstance().reset()
     }
+
 }

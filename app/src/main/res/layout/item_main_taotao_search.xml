@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="30px"
+              android:paddingRight="30px"
+              android:paddingTop="10px"
+              android:paddingBottom="34px"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:background="@color/white">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24px"
+                android:paddingRight="20px"
+                android:gravity="center_vertical"
+                android:drawableTop="@drawable/common_city_wide"
+                android:drawablePadding="2dp"
+                android:textColor="#242424"
+                android:text="同城"/>
+
+        <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="70px"
+                android:layout_weight="1"
+                android:background="@drawable/shape_main_taotao_search_bg">
+
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16px"
+                    android:paddingRight="16px"
+                    android:gravity="center_vertical"
+                    android:textSize="30px"
+                    android:drawablePadding="8dp"
+                    android:drawableLeft="@drawable/create_group_search"
+                    android:textColor="#999999"
+                    android:text="请输入关键词来搜索"/>
+
+
+        </FrameLayout>
+
+        <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10px"
+                android:textSize="24px"
+                android:drawablePadding="2dp"
+                android:drawableTop="@drawable/common_city_wide"
+                android:textColor="#242424"
+                android:text="分类"
+                />
+    </LinearLayout>
+
+
+</FrameLayout>

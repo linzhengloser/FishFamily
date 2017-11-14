@@ -30,8 +30,8 @@ public class DraftBoxActivity extends BaseListActivity {
     @Override
     protected void initViewsAndEvents() {
         super.initViewsAndEvents();
-        Utils.setTitle(this, "草稿箱");
-        Utils.setMenuText(this, "编辑");
+        Utils.INSTANCE.setTitle(this, "草稿箱");
+        Utils.INSTANCE.setMenuText(this, "编辑");
         rv_draft_box.setLayoutManager(new LinearLayoutManager(this));
         getMItems().add(new Draft(R.drawable.mine_draft_micro_post, "微帖", "我养的鲨鱼不吃肉？", "2017-01-01"));
         getMItems().add(new Draft(R.drawable.mine_draft_long_post, "长帖", "我养的鲨鱼不吃肉？", "2017-01-01"));

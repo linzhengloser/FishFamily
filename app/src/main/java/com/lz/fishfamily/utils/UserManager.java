@@ -3,8 +3,10 @@ package com.lz.fishfamily.utils;
 import com.google.gson.Gson;
 
 import android.text.TextUtils;
+import android.util.SparseArray;
 import android.widget.ImageView;
 
+import com.lz.fishfamily.R;
 import com.lz.fishfamily.module.User;
 
 /**
@@ -18,6 +20,17 @@ import com.lz.fishfamily.module.User;
  */
 public class UserManager {
 
+    private static SparseArray<Integer> sUserLevelMap = new SparseArray<>();
+
+    static {
+        sUserLevelMap.put(1, R.drawable.mine_level_one);
+        sUserLevelMap.put(2, R.drawable.mine_level_two);
+        sUserLevelMap.put(3, R.drawable.mine_level_three);
+        sUserLevelMap.put(4, R.drawable.mine_level_four);
+        sUserLevelMap.put(5, R.drawable.mine_level_five);
+        sUserLevelMap.put(6, R.drawable.mine_level_six);
+
+    }
 
     private static User sUser;
 
@@ -29,9 +42,8 @@ public class UserManager {
 
     /**
      * 是否登录
-     * @return
      */
-    public static boolean isLoggin() {
+    public static boolean isLogin() {
         return !TextUtils.isEmpty(getUser().getUserInfo_ID());
     }
 
@@ -52,6 +64,16 @@ public class UserManager {
 
     public static void clearUserJson() {
         CacheUtils.put("user_json", "");
+    }
+
+    /**
+     * 设置鱼豆
+     *
+     * @param fishMoney 要增加的鱼豆
+     */
+    public static void setUserFishMoney(int fishMoney) {
+        sUser.setUserInfo_Integer(sUser.getUserInfo_Integer() + fishMoney);
+        saveUserJson(sUser);
     }
 
     public static void bindUserLevel(ImageView imageView, int level) {

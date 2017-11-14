@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:gravity="center_horizontal"
               android:layout_width="match_parent"
@@ -9,16 +10,17 @@
 
 
     <ImageView
+            android:id="@+id/iv_shop_image"
             android:layout_width="86px"
             android:layout_height="86px"
-            android:src="@drawable/default_avatar"/>
+            app:layout_auto_baseheight="width"/>
 
 
     <TextView
+            android:id="@+id/tv_shop_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24px"
-            android:text="鱼的种类"
             android:layout_marginTop="15px"
             android:textColor="@color/black"/>
 

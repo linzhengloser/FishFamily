@@ -5,7 +5,7 @@
               android:layout_height="match_parent">
 
     <include
-            layout="@layout/common_titile_bar"
+            layout="@layout/common_title_bar"
             />
 
     <android.support.v7.widget.RecyclerView
@@ -42,7 +42,7 @@
                 <ImageView
                         android:layout_width="27px"
                         android:layout_height="24px"
-                        android:src="@drawable/main_post_like_unselected"/>
+                        android:src="@drawable/common_like_unselected"/>
 
                 <TextView
                         android:layout_width="wrap_content"

@@ -14,12 +14,6 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [eventBusIndex: 'com.lz.fishfamily.MyEventBusIndex']
-            }
-        }
-
     }
     buildTypes {
         release {
@@ -37,6 +31,12 @@ android {
     lintOptions {
         checkReleaseBuilds false
         abortOnError false
+    }
+
+    sourceSets{
+        main{
+            jniLibs.srcDirs = ["libs"]
+        }
     }
 }
 

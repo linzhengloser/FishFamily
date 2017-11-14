@@ -6,7 +6,7 @@
               android:orientation="vertical">
 
 
-    <include layout="@layout/common_titile_bar"/>
+    <include layout="@layout/common_title_bar"/>
 
 
     <LinearLayout
@@ -242,7 +242,7 @@
             android:layout_marginLeft="30px"
             android:layout_marginTop="18px"
             android:padding="18dp"
-            android:background="@drawable/shape_common_upload_imge_bg"
+            android:background="@drawable/shape_common_upload_image_bg"
             app:layout_auto_baseheight="width"
             android:src="@drawable/main_live_permission_apply_select_image"
             />

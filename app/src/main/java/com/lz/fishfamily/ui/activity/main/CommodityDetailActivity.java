@@ -6,11 +6,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.lz.fishfamily.R;
-import com.lz.fishfamily.module.main.Shop;
+import com.lz.fishfamily.module.main.shop.Shop;
 import com.lz.fishfamily.module.main.PostComment;
 import com.lz.fishfamily.ui.base.BaseListActivity;
-import com.lz.fishfamily.ui.multitype.main.CommodityDetailCommentItemViewBinder;
-import com.lz.fishfamily.ui.multitype.main.CommodityDetailItemViewBinder;
+import com.lz.fishfamily.ui.multitype.main.taotao.CommodityDetailCommentItemViewBinder;
+import com.lz.fishfamily.ui.multitype.main.taotao.CommodityDetailItemViewBinder;
 import com.lz.fishfamily.utils.Utils;
 
 import butterknife.BindView;
@@ -32,7 +32,7 @@ public class CommodityDetailActivity extends BaseListActivity {
     @Override
     protected void initViewsAndEvents() {
         super.initViewsAndEvents();
-        Utils.setTitle(this,"商品详情 ");
+        Utils.INSTANCE.setTitle(this,"商品详情 ");
         rv_commodity_detail.setLayoutManager(new LinearLayoutManager(this));
         getMItems().add(new Shop());
         for (int i = 0; i < 20; i++) {

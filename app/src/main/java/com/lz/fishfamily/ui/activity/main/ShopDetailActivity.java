@@ -16,7 +16,7 @@ import com.lz.fishfamily.utils.Utils;
 public class ShopDetailActivity extends BaseActivity {
     @Override
     protected void initViewsAndEvents() {
-        Utils.setTitle(this,"店铺详情");
+        Utils.INSTANCE.setTitle(this,"店铺详情");
     }
 
     @Override

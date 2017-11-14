@@ -6,7 +6,7 @@
               android:gravity="center_horizontal"
               android:background="#fafafa">
 
-    <include layout="@layout/common_titile_bar"/>
+    <include layout="@layout/common_title_bar"/>
 
 
     <!--<View-->

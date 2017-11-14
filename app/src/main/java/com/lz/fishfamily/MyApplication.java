@@ -2,6 +2,7 @@ package com.lz.fishfamily;
 
 import android.app.ActivityManager;
 import android.content.Context;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 
 import com.bilibili.boxing.BoxingCrop;
@@ -9,12 +10,17 @@ import com.bilibili.boxing.BoxingMediaLoader;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.chat.EMOptions;
+import com.kingja.loadsir.callback.SuccessCallback;
+import com.kingja.loadsir.core.LoadSir;
+import com.lz.fishfamily.im.CallReceiver;
 import com.lz.fishfamily.im.IMManager;
 import com.lz.fishfamily.im.IMNotifier;
 import com.lz.fishfamily.utils.BoxingGlideLoader;
 import com.lz.fishfamily.utils.BoxingUcrop;
 import com.lz.fishfamily.utils.im.SimpleEMMEssageListListener;
 import com.lz.library.LibraryApplication;
+import com.lz.library.utils.loadsir.EmptyCallback;
+import com.lz.library.utils.loadsir.LoadingCallback;
 import com.zhy.autolayout.config.AutoLayoutConifg;
 
 import java.util.Iterator;
@@ -39,7 +45,17 @@ public class MyApplication extends LibraryApplication {
         AutoLayoutConifg.getInstance().useDeviceSize();
         initIM();
         initBoxing();
+        initLoadSir();
+    }
 
+    /**
+     * 初始化 LoadSir
+     */
+    private void initLoadSir(){
+        LoadSir.beginBuilder()
+                .addCallback(new LoadingCallback())//添加各种状态页
+                .addCallback(new EmptyCallback()).setDefaultCallback(SuccessCallback.class)
+                .commit();
     }
 
     /**
@@ -67,7 +83,6 @@ public class MyApplication extends LibraryApplication {
         EMClient.getInstance().init(this, options);
         EMClient.getInstance().setDebugMode(BuildConfig.DEBUG);
         mIMSdkInited = true;
-
         registerGlobalListener();
     }
 
@@ -86,6 +101,10 @@ public class MyApplication extends LibraryApplication {
                 }
             }
         });
+
+        //注册呼叫 Reciver
+        IntentFilter callFilter = new IntentFilter(EMClient.getInstance().callManager().getIncomingCallBroadcastAction());
+        registerReceiver(new CallReceiver(),callFilter);
 
     }
 

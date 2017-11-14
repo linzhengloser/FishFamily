@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.lz.fishfamily.R;
-import com.lz.fishfamily.module.main.Shop;
+import com.lz.fishfamily.module.main.shop.Shop;
 import com.lz.fishfamily.ui.base.BaseListActivity;
 import com.lz.fishfamily.ui.multitype.mine.ShoppingCarCommodityItemViewBinder;
 import com.lz.fishfamily.ui.multitype.mine.ShoppingCarShopItemViewBinder;
@@ -35,8 +35,8 @@ public class ShoppingCarActivity extends BaseListActivity {
     @Override
     protected void initViewsAndEvents() {
         super.initViewsAndEvents();
-        Utils.setTitle(this, "购物车");
-        Utils.setMenuText(this, "编辑");
+        Utils.INSTANCE.setTitle(this, "购物车");
+        Utils.INSTANCE.setMenuText(this, "编辑");
         rv_shopping_car.setLayoutManager(new LinearLayoutManager(this));
         rv_shopping_car.addItemDecoration(new RecyclerView.ItemDecoration() {
             @Override

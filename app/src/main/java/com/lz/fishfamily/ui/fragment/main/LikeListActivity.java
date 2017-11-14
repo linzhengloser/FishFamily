@@ -7,8 +7,9 @@ import android.view.View;
 
 import com.lz.fishfamily.R;
 import com.lz.fishfamily.module.User;
+import com.lz.fishfamily.module.main.LikeList;
 import com.lz.fishfamily.ui.base.BaseListActivity;
-import com.lz.fishfamily.ui.multitype.main.LikeListItemViewBinder;
+import com.lz.fishfamily.ui.multitype.main.live.LikeListItemViewBinder;
 import com.zhy.autolayout.utils.AutoUtils;
 
 import butterknife.BindView;
@@ -45,7 +46,7 @@ public class LikeListActivity extends BaseListActivity {
 
     @Override
     protected void registerItemViewBinder() {
-        getMAdapter().register(User.class, new LikeListItemViewBinder());
+        getMAdapter().register(LikeList.class, new LikeListItemViewBinder());
     }
 
     @Override

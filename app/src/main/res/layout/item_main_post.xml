@@ -142,7 +142,7 @@
         <ImageView
                 android:layout_width="30px"
                 android:layout_height="26px"
-                android:src="@drawable/main_post_like_unselected"
+                android:src="@drawable/common_like_unselected"
                 />
 
         <TextView
@@ -157,7 +157,7 @@
                 android:layout_width="30px"
                 android:layout_height="26px"
                 android:layout_marginLeft="40px"
-                android:src="@drawable/main_post_comment"
+                android:src="@drawable/common_comment"
                 />
 
         <TextView

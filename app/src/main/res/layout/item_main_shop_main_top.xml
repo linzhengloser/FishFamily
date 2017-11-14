@@ -45,7 +45,7 @@
                         android:layout_weight="1"
                         android:layout_marginLeft="30px"
                         android:layout_marginRight="30px"
-                        android:background="@drawable/shape_main_shop_mian_search_bg">
+                        android:background="@drawable/shape_main_shop_main_search_bg">
 
 
                     <TextView

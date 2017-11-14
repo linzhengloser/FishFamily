@@ -32,7 +32,7 @@ public class ShareListActivity extends BaseListActivity {
     @Override
     protected void initViewsAndEvents() {
         super.initViewsAndEvents();
-        Utils.setTitle(this, "我的分享");
+        Utils.INSTANCE.setTitle(this, "我的分享");
 
         rv_share_list.setLayoutManager(new LinearLayoutManager(this));
         rv_share_list.addItemDecoration(new PostItemDecoration());

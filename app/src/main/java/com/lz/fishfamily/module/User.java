@@ -13,19 +13,19 @@ public class User {
 
     /**
      * UserInfo_ID : 5acea66c-8cbe-4a76-88a7-1efbedde4d85
-     * UserInfo_HeadImg : http://fweb.whmnx.com/UserFile/Image/userhead.jpg
-     * UserInfo_NickName :
+     * UserInfo_HeadImg : http://fweb.whmnx.com/Resource/PhotoFile/5a630735-d046-4986-b5c7-c396010107a6.jpg
+     * UserInfo_NickName : 大佬111
      * UserInfo_Pwd : FCEA920F7412B5DA7BE0CF42B8C93759
      * UserInfo_Mobile : 13477484198
-     * UserInfo_Sex : 0
+     * UserInfo_Sex : 1
      * UserInfo_Money : 0
      * UserInfo_Integer : 0
      * UserInfo_CreateTime : 2017-09-10T17:14:01.167
      * UserInfo_State : 0
      * UserInfo_IsApp : 0
-     * UserInfo_Provice :
-     * UserInfo_City :
-     * UserInfo_Region :
+     * UserInfo_Provice : 湖北省
+     * UserInfo_City : 武汉市
+     * UserInfo_Region : 东西湖区
      * UserInfo_DetailAddress :
      * UserInfo_Type : 1
      * UserInfo_ParentID :
@@ -34,9 +34,14 @@ public class User {
      * UserInfo_Level : 0
      * UserInfo_FullAddress :
      * UserInfo_TotalMoney : 0
-     * UserInfo_Describe : 这家伙很懒，什么都没有留下。
+     * UserInfo_Describe : 大吉大利，今晚吃鸡。
      * UserInfo_UUAccount : 13477484198
      * UserInfo_UUID : 63170fd0-9608-11e7-bfe8-716c9560e219
+     * UserInfo_Labelling : 、
+     * Business_ID : null
+     * ShareCount : 0
+     * FansCount : 158
+     * FllowCount : 300
      */
 
     private String UserInfo_ID;
@@ -64,10 +69,11 @@ public class User {
     private String UserInfo_Describe;
     private String UserInfo_UUAccount;
     private String UserInfo_UUID;
+    private String UserInfo_Labelling;
+    private Object Business_ID;
     private int ShareCount;
     private int FansCount;
     private int FllowCount;
-
 
     public String getUserInfo_ID() {
         return UserInfo_ID;
@@ -269,30 +275,43 @@ public class User {
         this.UserInfo_UUID = UserInfo_UUID;
     }
 
+    public String getUserInfo_Labelling() {
+        return UserInfo_Labelling;
+    }
+
+    public void setUserInfo_Labelling(String UserInfo_Labelling) {
+        this.UserInfo_Labelling = UserInfo_Labelling;
+    }
+
+    public Object getBusiness_ID() {
+        return Business_ID;
+    }
+
+    public void setBusiness_ID(Object Business_ID) {
+        this.Business_ID = Business_ID;
+    }
+
     public int getShareCount() {
         return ShareCount;
     }
 
-    public User setShareCount(int shareCount) {
-        ShareCount = shareCount;
-        return this;
+    public void setShareCount(int ShareCount) {
+        this.ShareCount = ShareCount;
     }
 
     public int getFansCount() {
         return FansCount;
     }
 
-    public User setFansCount(int fansCount) {
-        FansCount = fansCount;
-        return this;
+    public void setFansCount(int FansCount) {
+        this.FansCount = FansCount;
     }
 
     public int getFllowCount() {
         return FllowCount;
     }
 
-    public User setFllowCount(int fllowCount) {
-        FllowCount = fllowCount;
-        return this;
+    public void setFllowCount(int FllowCount) {
+        this.FllowCount = FllowCount;
     }
 }

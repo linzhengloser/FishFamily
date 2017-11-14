@@ -9,8 +9,8 @@ import android.view.View;
 import com.lz.fishfamily.R;
 import com.lz.fishfamily.module.main.Live;
 import com.lz.fishfamily.ui.base.BaseListFragment;
-import com.lz.fishfamily.ui.multitype.main.LiveItemViewBinder;
-import com.lz.fishfamily.ui.multitype.main.LiveTopItemViewBinder;
+import com.lz.fishfamily.ui.multitype.main.live.LiveItemViewBinder;
+import com.lz.fishfamily.ui.multitype.main.live.LiveTopItemViewBinder;
 import com.zhy.autolayout.utils.AutoUtils;
 
 import butterknife.BindView;

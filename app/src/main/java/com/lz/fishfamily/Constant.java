@@ -11,6 +11,29 @@ package com.lz.fishfamily;
  */
 public class Constant {
 
+    public static final int PAGE_SIZE = 10;
+
+    public static final String PAGE_SIZE_KEY ="rows";
+
+    public static final String PAGE_INDEX_KEY ="page";
+
+    // -------------------- 公共字段 Key 和 Value --------------------
+
+    //排序字段 Key
+    public static final String SORT_FIELD_KEY = "sidx";
+
+    //筛选条件 Key
+    public static final String SCREEN_CONDITION_KEY = "conditionJson";
+
+    //默认筛选条件
+    public static final String DEFAULT_SCREEN_CONDITION = "{}";
+
+    //排序方式 Key
+    public static final String SORT_KEY = "sord";
+
+    //默认排序方式
+    public static final String DEFAULT_SORT = "desc";
+
     public static final String TEST_IMAGE_URL = "http://ofdvg4c5w.bkt.clouddn.com/qm.jpg";
 
     public static final String INTENT_KEY_USER_ID = "user_id";

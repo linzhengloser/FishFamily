@@ -5,7 +5,7 @@
               android:orientation="vertical"
               android:background="#fafafa">
 
-    <include layout="@layout/common_titile_bar"/>
+    <include layout="@layout/common_title_bar"/>
 
     <View
             android:layout_width="match_parent"

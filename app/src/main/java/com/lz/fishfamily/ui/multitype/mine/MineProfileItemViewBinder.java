@@ -41,7 +41,7 @@ public class MineProfileItemViewBinder extends ItemViewBinder<User, MineProfileI
 
     @Override
     protected void onBindViewHolder(@NonNull MineProfileViewHolder holder, @NonNull User item) {
-        if (UserManager.isLoggin()) {
+        if (UserManager.isLogin()) {
             holder.ll_login_layout.setVisibility(View.VISIBLE);
             holder.tv_no_login.setVisibility(View.GONE);
             GlideApp.with(holder.itemView.getContext()).load(item.getUserInfo_HeadImg()).loadAvatar().into(holder.iv_avatar);
@@ -51,8 +51,8 @@ public class MineProfileItemViewBinder extends ItemViewBinder<User, MineProfileI
             holder.tv_fans.setText(String.valueOf(item.getFansCount()));
             holder.tv_fish_bean.setText(String.valueOf(item.getUserInfo_Money()));
             UserManager.bindUserLevel(holder.iv_level, item.getUserInfo_Level());
-            holder.ll_fans.setOnClickListener(view -> FansAttentionListActivity.toFansActivity(holder.itemView.getContext()));
-            holder.ll_attention.setOnClickListener(view -> FansAttentionListActivity.toAttentionActivity(holder.itemView.getContext()));
+            holder.ll_fans.setOnClickListener(view -> FansAttentionListActivity.Companion.toFansActivity(holder.itemView.getContext()));
+            holder.ll_attention.setOnClickListener(view -> FansAttentionListActivity.Companion.toAttentionActivity(holder.itemView.getContext()));
             holder.ll_share.setOnClickListener(view -> ShareListActivity.toActivity(holder.itemView.getContext()));
         } else {
             holder.tv_no_login.setVisibility(View.VISIBLE);
@@ -60,8 +60,8 @@ public class MineProfileItemViewBinder extends ItemViewBinder<User, MineProfileI
         }
 
         holder.ll_profile.setOnClickListener(view -> {
-            if (UserManager.isLoggin())
-                ProfileActivity.toActivity(view.getContext());
+            if (UserManager.isLogin())
+                ProfileActivity.Companion.toActivity(view.getContext());
             else
                 LoginActivity.toActivity(view.getContext());
         });

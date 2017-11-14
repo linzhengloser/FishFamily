@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.lz.fishfamily.R;
-import com.lz.fishfamily.module.main.Shop;
+import com.lz.fishfamily.module.main.shop.Shop;
 import com.lz.library.base.BaseViewHolder;
 
 import me.drakeet.multitype.ItemViewBinder;

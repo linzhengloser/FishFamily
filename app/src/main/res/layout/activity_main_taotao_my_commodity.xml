@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <include
+            layout="@layout/common_title_bar"
+            />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+        <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="30px"
+                    android:textColor="@color/colorPrimary"
+                    android:text="正在出售"
+                    />
+
+            <View
+                    android:layout_width="140px"
+                    android:layout_height="4px"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="@color/colorPrimary"/>
+
+        </FrameLayout>
+
+        <View
+                android:layout_width="2px"
+                android:layout_height="30px"
+                android:layout_gravity="center_vertical"
+                android:background="#dddddd"/>
+
+        <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="30px"
+                    android:textColor="#242424"
+                    android:text="正在出售"
+                    />
+
+            <View
+                    android:visibility="gone"
+                    android:layout_width="140px"
+                    android:layout_height="4px"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="@color/colorPrimary"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/vp_my_commodity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+</LinearLayout>

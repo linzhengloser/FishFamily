@@ -39,7 +39,7 @@ public class PublishPostActivity extends BaseActivity {
 
     @Override
     protected void initViewsAndEvents() {
-        Utils.setMenuText(this, "发布");
+        Utils.INSTANCE.setMenuText(this, "发布");
         mAdapter = new SelectImageRecyclerViewAdapter();
         rv_publish_post.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         rv_publish_post.setAdapter(mAdapter);

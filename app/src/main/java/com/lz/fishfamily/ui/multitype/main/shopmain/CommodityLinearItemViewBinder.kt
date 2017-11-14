@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.lz.fishfamily.Constant
 import com.lz.fishfamily.R
-import com.lz.fishfamily.module.main.Commodity
+import com.lz.fishfamily.module.main.commodity.Commodity
 import com.lz.library.base.BaseViewHolder
 import kotlinx.android.synthetic.main.item_main_shop_main_commodity_linear.view.*
 import me.drakeet.multitype.ItemViewBinder

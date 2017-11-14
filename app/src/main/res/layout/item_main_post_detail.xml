@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30px"
                 android:gravity="center_vertical"
-                android:drawableLeft="@drawable/main_post_like_selected"
+                android:drawableLeft="@drawable/common_like_selected"
                 android:drawablePadding="7dp"
                 android:text="2333"/>
 
@@ -223,7 +223,7 @@
             android:layout_marginTop="30px"
             android:layout_marginBottom="30px"
             android:drawablePadding="5dp"
-            android:drawableLeft="@drawable/main_post_detail_comment_total_number"
+            android:drawableLeft="@drawable/common_comment"
             android:text="2333"/>
 
 </LinearLayout>

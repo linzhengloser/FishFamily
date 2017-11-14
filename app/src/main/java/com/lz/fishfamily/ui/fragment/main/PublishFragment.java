@@ -33,16 +33,16 @@ public class PublishFragment extends BaseFragment {
         return R.layout.fragment_main_publish;
     }
 
-    @OnClick({R.id.ll_sign_in, R.id.ll_publish_commodity,R.id.ll_publish_post})
+    @OnClick({R.id.ll_sign_in, R.id.ll_publish_commodity,R.id.ll_publish_post,R.id.ll_publish_long_post})
     public void onClick(View view) {
         switch (view.getId()) {
             //签到
             case R.id.ll_sign_in:
-                SignInActivity.toActivity(getContext());
+                SignInActivity.Companion.toActivity(getContext());
                 break;
             //发布商品
             case R.id.ll_publish_commodity:
-                PublishCommodityActivity.toActivity(view.getContext());
+                PublishCommodityActivity.Companion.toActivity(view.getContext());
                 break;
             //发布分享
             case R.id.ll_publish_post:

@@ -14,7 +14,7 @@ import com.lz.fishfamily.ui.MainActivity;
 import com.lz.fishfamily.ui.base.BaseActivity;
 import com.lz.fishfamily.utils.CacheUtils;
 import com.lz.fishfamily.utils.event.LoginEvent;
-import com.lz.fishfamily.utils.rxjava.HandlerApiResultCosumer;
+import com.lz.fishfamily.utils.rxjava.HandlerApiResultConsumer;
 import com.lz.fishfamily.utils.rxjava.HandlerApiResultFunction;
 import com.lz.library.utils.ToastUtils;
 
@@ -59,23 +59,21 @@ public class LoginActivity extends BaseActivity {
         if (view.getId() == R.id.tv_login) {
             if (validate()) login();
         } else if (view.getId() == R.id.tv_register) {
-//            CompleteProfileActivity.toActivity(view.getContext(), CacheUtils.getUserId());
             RegisterActivity.toRegisterActivity(view.getContext());
         } else {
             RegisterActivity.toFindPwdActivity(view.getContext());
         }
-
     }
 
     private void login() {
-        showLoadingDialog();
+        showLoading();
         String phoneNumber = et_login_phone_number.getText().toString().trim();
         String pwd = et_login_pwd.getText().toString().trim();
         Api.create(LoginApi.class)
                 .login(phoneNumber, pwd)
                 .compose(bindToLifecycle())
-                .map(new HandlerApiResultFunction<>())
-                .doFinally(() -> hidLoadingDialog())
+                .map(new HandlerApiResultFunction<>(this))
+                .doFinally(() -> showSuccess())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(s -> {
                     CacheUtils.saveToken(s.getToken());
@@ -83,7 +81,7 @@ public class LoginActivity extends BaseActivity {
                     ToastUtils.showToast("登录成功");
                     EventBus.getDefault().post(new LoginEvent(LoginEvent.EVENT_TYPE_GET_USER_INFO));
                     MainActivity.toActivity(LoginActivity.this);
-                }, new HandlerApiResultCosumer());
+                }, new HandlerApiResultConsumer());
     }
 
     private boolean validate() {

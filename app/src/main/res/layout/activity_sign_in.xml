@@ -7,7 +7,7 @@
               android:background="#eeeeee">
 
     <include
-            layout="@layout/common_titile_bar"
+            layout="@layout/common_title_bar"
             />
 
     <FrameLayout
@@ -49,13 +49,13 @@
                 android:background="@drawable/sign_in_fish">
 
             <TextView
+                    android:id="@+id/tv_fish_money"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="180px"
                     android:textSize="30px"
-                    android:textColor="@color/white"
-                    android:text="23333"/>
+                    android:textColor="@color/white"/>
 
 
         </FrameLayout>
@@ -70,13 +70,13 @@
                 android:gravity="center_horizontal">
 
             <TextView
+                    android:id="@+id/tv_sign_in_btn"
                     android:layout_width="600px"
                     android:layout_height="110px"
                     android:gravity="center"
                     android:background="@drawable/sign_in_btn"
                     android:textSize="30px"
-                    android:textColor="@color/white"
-                    android:text="明日签到领10鱼豆"/>
+                    android:textColor="@color/white"/>
 
             <TextView
                     android:layout_width="wrap_content"
@@ -88,6 +88,8 @@
 
 
             <LinearLayout
+                    android:id="@+id/ll_continuous_sign_in"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="44px"
@@ -98,8 +100,8 @@
 
                 <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
 
@@ -107,9 +109,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="68px"
                             android:gravity="center"
-                            android:background="@drawable/sign_in_already"
                             android:textSize="28px"
-                            android:textColor="@color/black"
                             android:text="+5"/>
 
                     <TextView
@@ -132,8 +132,8 @@
 
                 <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
 
@@ -141,9 +141,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="68px"
                             android:gravity="center"
-                            android:background="@drawable/sign_in_current"
                             android:textSize="28px"
-                            android:textColor="@color/white"
                             android:text="+5"/>
 
                     <TextView
@@ -166,8 +164,8 @@
 
                 <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
 
@@ -175,9 +173,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="68px"
                             android:gravity="center"
-                            android:background="@drawable/sign_in_later"
                             android:textSize="28px"
-                            android:textColor="@color/colorPrimary"
                             android:text="+5"/>
 
                     <TextView
@@ -200,8 +196,8 @@
 
                 <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
 
@@ -209,9 +205,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="68px"
                             android:gravity="center"
-                            android:background="@drawable/sign_in_later"
                             android:textSize="28px"
-                            android:textColor="@color/colorPrimary"
                             android:text="+5"/>
 
                     <TextView
@@ -234,8 +228,8 @@
 
                 <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
 
@@ -243,9 +237,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="68px"
                             android:gravity="center"
-                            android:background="@drawable/sign_in_later"
                             android:textSize="28px"
-                            android:textColor="@color/colorPrimary"
                             android:text="+5"/>
 
                     <TextView
@@ -268,8 +260,8 @@
 
                 <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
 
@@ -277,9 +269,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="68px"
                             android:gravity="center"
-                            android:background="@drawable/sign_in_later"
                             android:textSize="28px"
-                            android:textColor="@color/colorPrimary"
                             android:text="+5"/>
 
                     <TextView
@@ -302,8 +292,8 @@
 
                 <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
 
@@ -311,9 +301,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="68px"
                             android:gravity="center"
-                            android:background="@drawable/sign_in_later"
                             android:textSize="28px"
-                            android:textColor="@color/colorPrimary"
                             android:text="+10"/>
 
                     <TextView
