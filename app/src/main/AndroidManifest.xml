@@ -172,6 +172,9 @@
         <!-- 发布长帖 -->
         <activity android:name=".ui.activity.main.PublishLongPostActivity"/>
 
+        <!-- 商品列表-->
+        <activity android:name=".ui.activity.main.CommodityListActivity"/>
+
         <!-- 店铺首页 -->
         <activity android:name=".ui.activity.main.ShopMainActivity"/>
 

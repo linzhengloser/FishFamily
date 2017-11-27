@@ -25,7 +25,7 @@ public class ChatCommodityInfoItemViewBinder extends BaseChatItemViewBinder<Chat
     }
 
     @Override
-    protected void onBindContentViewholder(ChatCommodityInfoViewHolder holder, EMMessage itme, int position) {
+    protected void onBindContentViewHolder(ChatCommodityInfoViewHolder holder, EMMessage itme, int position) {
 
     }
 

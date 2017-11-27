@@ -11,11 +11,13 @@ import com.lz.fishfamily.api.CommodityApi
 import com.lz.fishfamily.api.ShopApi
 import com.lz.fishfamily.module.main.Comment
 import com.lz.fishfamily.module.main.LikeList
+import com.lz.fishfamily.module.main.MainDivider
 import com.lz.fishfamily.module.main.commodity.Commodity
 import com.lz.fishfamily.module.main.shop.Shop
 import com.lz.fishfamily.ui.base.BaseListFragment
 import com.lz.fishfamily.ui.multitype.main.CommentItemViewBinder
 import com.lz.fishfamily.ui.multitype.main.LikeAvatarItemViewBinder
+import com.lz.fishfamily.ui.multitype.main.MainDividerItemViewBinder
 import com.lz.fishfamily.ui.multitype.main.taotao.CommodityItemViewBinder
 import com.lz.fishfamily.ui.multitype.main.taotao.SearchItemViewBinder
 import com.lz.fishfamily.ui.multitype.main.taotao.ShopItemViewBinder
@@ -49,11 +51,9 @@ class TaotaoFragment : BaseListFragment() {
         super.initViewsAndEvents()
         val gridLayoutManager = GridLayoutManager(context, 10)
         gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
-            override fun getSpanSize(position: Int): Int {
-                return when {
-                    mItems[position] is Shop -> 2
-                    else -> 10
-                }
+            override fun getSpanSize(position: Int): Int = when {
+                mItems[position] is Shop -> 2
+                else -> 10
             }
         }
         rv_taotao.addItemDecoration(object : RecyclerView.ItemDecoration() {
@@ -70,7 +70,6 @@ class TaotaoFragment : BaseListFragment() {
             }
         })
         rv_taotao.layoutManager = gridLayoutManager
-        mItems.add("商家活体搜索")
         rv_taotao.adapter = mAdapter
     }
 
@@ -90,11 +89,18 @@ class TaotaoFragment : BaseListFragment() {
                 BiFunction<List<Shop>, List<Commodity>, Items> { t1, t2 ->
                     val items = Items()
                     items.addAll(t1)
-                    if (t1.size == 9) items.add(Shop().apply { business_ID = "-1" })
+                    if (t1.size == 9) items.add(Shop().apply {
+                        business_ID = "-1"
+                        name = "更多"
+                    })
                     t2.map {
                         items.add(it)
                         if (it.like.isNotEmpty()) items.add(LikeList(it.like))
-                        if (it.comment.isNotEmpty()) it.comment.map { items.add(it) }
+                        it.comment.forEachIndexed { index, comment ->
+                            items.add(comment)
+                            if (index == it.comment.size - 1) items.add(MainDivider().apply { if (it.comment.size >= 5) isShowMoreComment = true })
+                        }
+                        items.add(MainDivider())
                     }
                     items
                 })
@@ -103,6 +109,7 @@ class TaotaoFragment : BaseListFragment() {
                 .doFinally { showSuccess() }
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(Consumer {
+                    mItems.add("商家活体搜索")
                     mItems.addAll(it)
                     mAdapter.notifyDataSetChanged()
                 }, HandlerApiResultConsumer())
@@ -118,6 +125,7 @@ class TaotaoFragment : BaseListFragment() {
         mAdapter.register(Commodity::class.java, CommodityItemViewBinder())
         mAdapter.register(LikeList::class.java, LikeAvatarItemViewBinder())
         mAdapter.register(Comment::class.java, CommentItemViewBinder())
+        mAdapter.register(MainDivider::class.java, MainDividerItemViewBinder())
     }
 
     companion object {

@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.lz.fishfamily.R
 import com.lz.fishfamily.module.main.shop.Shop
-import com.lz.fishfamily.ui.activity.main.ShopMainActivity
+import com.lz.fishfamily.ui.activity.main.CommodityListActivity
 import com.lz.fishfamily.utils.glide.GlideApp
 import com.lz.library.base.BaseViewHolder
 import kotlinx.android.synthetic.main.item_main_fish_type.view.*
@@ -27,18 +27,18 @@ internal class ShopItemViewBinder : ItemViewBinder<Shop, ShopItemViewBinder.Fish
 
     override fun onBindViewHolder(holder: FishTypeViewHolder, item: Shop) {
         //店铺名称
-        GlideApp.with(holder.itemView.context)
+        if (item.business_ID == "-1") holder.itemView.iv_shop_image.setImageResource(R.drawable.main_shop_more) else GlideApp.with(holder.itemView.context)
                 .load(item.headImg)
                 .circleCrop()
                 .into(holder.itemView.iv_shop_image)
         //店铺头像
         holder.itemView.tv_shop_name.text = item.name
-    }
 
-    internal class FishTypeViewHolder(itemView: View) : BaseViewHolder(itemView){
-        init {
-            itemView.setOnClickListener{ShopMainActivity.Companion.toActivity(itemView.context)}
+        holder.itemView.setOnClickListener{
+            CommodityListActivity.toActivity(it.context,item.business_ID)
         }
     }
+
+    class FishTypeViewHolder(itemView: View) : BaseViewHolder(itemView)
 
 }

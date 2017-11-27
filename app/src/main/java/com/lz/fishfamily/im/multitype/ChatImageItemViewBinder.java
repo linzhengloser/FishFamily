@@ -31,7 +31,7 @@ public class ChatImageItemViewBinder extends BaseChatItemViewBinder<ChatImageIte
     }
 
     @Override
-    protected void onBindContentViewholder(ChatImageViewHolder holder, EMMessage itme,int position) {
+    protected void onBindContentViewHolder(ChatImageViewHolder holder, EMMessage itme, int position) {
         EMImageMessageBody imgBody = (EMImageMessageBody) itme.getBody();
         String imageUrl = null;
 

@@ -1,5 +1,8 @@
 package com.lz.fishfamily.module.main;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * <pre>
  *     author : linzheng
@@ -9,7 +12,7 @@ package com.lz.fishfamily.module.main;
  *     version: 1.0
  * </pre>
  */
-public class Comment {
+public class Comment implements Parcelable {
 
 
     /**
@@ -105,4 +108,50 @@ public class Comment {
     public void setTime(String Time) {
         this.Time = Time;
     }
+
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.Comment_ID);
+        dest.writeString(this.CommentParent_ID);
+        dest.writeString(this.UserInfo_ID);
+        dest.writeString(this.UserName);
+        dest.writeString(this.PassiveUserName);
+        dest.writeString(this.HeadImage);
+        dest.writeString(this.Comment_Content);
+        dest.writeString(this.Other_ID);
+        dest.writeString(this.Time);
+    }
+
+    public Comment() {
+    }
+
+    protected Comment(Parcel in) {
+        this.Comment_ID = in.readString();
+        this.CommentParent_ID = in.readString();
+        this.UserInfo_ID = in.readString();
+        this.UserName = in.readString();
+        this.PassiveUserName = in.readString();
+        this.HeadImage = in.readString();
+        this.Comment_Content = in.readString();
+        this.Other_ID = in.readString();
+        this.Time = in.readString();
+    }
+
+    public static final Parcelable.Creator<Comment> CREATOR = new Parcelable.Creator<Comment>() {
+        @Override
+        public Comment createFromParcel(Parcel source) {
+            return new Comment(source);
+        }
+
+        @Override
+        public Comment[] newArray(int size) {
+            return new Comment[size];
+        }
+    };
 }

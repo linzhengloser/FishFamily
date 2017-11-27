@@ -19,9 +19,8 @@ class HandlerApiResultFunction<T>(private val baseView: BaseView) : Function<Res
     override fun apply(t: Response<T>): T {
         if (t.type == 1) {
             if (t.resultdata is List<*> && (t.resultdata as List<*>).isEmpty()) baseView.showEmpty()
-            else return t.resultdata
-        }
-        throw ApiException(t.message)
+            return t.resultdata
+        } else throw ApiException(t.message)
     }
 
 }

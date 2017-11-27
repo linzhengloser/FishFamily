@@ -1,5 +1,7 @@
 package com.lz.fishfamily.ui.activity.main
 
+import android.content.Context
+import android.content.Intent
 import android.support.v4.app.Fragment
 import com.lz.fishfamily.R
 import com.lz.fishfamily.ui.base.BaseActivity
@@ -20,16 +22,23 @@ import kotlinx.android.synthetic.main.activity_main_taotao_my_commodity.*
 
 class MyCommodityActivity : BaseActivity(){
 
-    val mFragmentList = mutableListOf<Fragment>()
+    private val mFragmentList = mutableListOf<Fragment>()
 
     override fun initViewsAndEvents() {
         Utils.setTitle(this,"我的商品")
-        mFragmentList.add(MyCommodityFragment.newInstance())
-        mFragmentList.add(MyCommodityFragment.newInstance())
+        mFragmentList.add(MyCommodityFragment.newInstance(MyCommodityFragment.TYPE_SELL))
+        mFragmentList.add(MyCommodityFragment.newInstance(MyCommodityFragment.TYPE_SOLD_OUT))
         vp_my_commodity.adapter = BaseViewPagerAdapter(supportFragmentManager,mFragmentList)
     }
 
     override val contentViewResourceID: Int
         get() = R.layout.activity_main_taotao_my_commodity
+
+    companion object {
+        fun toActivity(context:Context){
+            val intent = Intent(context,MyCommodityActivity::class.java)
+            context.startActivity(intent)
+        }
+    }
 
 }

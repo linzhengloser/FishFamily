@@ -43,7 +43,7 @@ public class MessageFragment extends LibraryBaseListFragment {
     private static final int MSG_WHAT_REFRESH = 1;
 
     @BindView(R.id.rv_message)
-    RecyclerView rv_messgae;
+    RecyclerView rv_message;
 
     boolean isConflict;
 
@@ -69,9 +69,9 @@ public class MessageFragment extends LibraryBaseListFragment {
         getMItems().add(new ChatFreelyFunction(ChatFreelyFunction.FUNCTION_TYPE_FISH_FRIEND_HELPER));
         getMItems().add(new ChatFreelyFunction(ChatFreelyFunction.FUNCTION_TYPE_SYSTEM_NOTIFICATION));
         getMItems().add(new ChatFreelyFunction(ChatFreelyFunction.FUNCTION_TYPE_COMMENT));
-        rv_messgae.setLayoutManager(new LinearLayoutManager(getActivity()));
-        rv_messgae.addItemDecoration(new PaddingItemDecoration().setPadding(130, 0));
-        rv_messgae.setAdapter(getMAdapter());
+        rv_message.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rv_message.addItemDecoration(new PaddingItemDecoration().setPadding(130, 0));
+        rv_message.setAdapter(getMAdapter());
         getMAdapter().notifyDataSetChanged();
 
         EMClient.getInstance().addConnectionListener(mConnectionListener);
@@ -83,9 +83,6 @@ public class MessageFragment extends LibraryBaseListFragment {
      * 加载会话列表
      */
     private List<EMConversation> loadConversationList() {
-
-        String user = EMClient.getInstance().getCurrentUser();
-
         Map<String, EMConversation> conversationMap = EMClient.getInstance().chatManager().getAllConversations();
         List<EMConversation> conversationList = new ArrayList<>();
         //将空会话移除

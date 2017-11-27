@@ -18,12 +18,14 @@
                 android:orientation="vertical">
 
             <EditText
+                    android:id="@+id/et_title"
                     android:layout_width="match_parent"
                     android:layout_height="90px"
                     android:paddingLeft="30px"
                     android:paddingRight="30px"
                     android:background="@color/transparency"
                     android:textSize="30px"
+                    android:maxLength="20"
                     android:textColorHint="#999999"
                     android:textColor="@color/black"
                     android:hint="标题 (20字)"/>
@@ -36,6 +38,7 @@
                     />
 
             <EditText
+                    android:id="@+id/et_content"
                     android:layout_width="match_parent"
                     android:layout_height="400px"
                     android:paddingLeft="30px"
@@ -46,6 +49,7 @@
                     android:textSize="30px"
                     android:textColorHint="#999999"
                     android:textColor="@color/black"
+                    android:maxLength="140"
                     android:hint="描述下您的商品吧 (140字)"/>
 
             <View
@@ -255,6 +259,7 @@
                         android:text="价格   (元)"/>
 
                 <EditText
+                        android:id="@+id/et_price"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="70px"
@@ -288,6 +293,7 @@
                         android:text="运费"/>
 
                 <EditText
+                        android:id="@+id/et_freight"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="140px"
@@ -321,6 +327,7 @@
                         android:text="库存"/>
 
                 <EditText
+                        android:id="@+id/et_inventory"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="140px"
@@ -348,6 +355,7 @@
     </ScrollView>
 
     <TextView
+            android:id="@+id/tv_publish_btn"
             android:layout_width="match_parent"
             android:layout_height="98px"
             android:gravity="center"

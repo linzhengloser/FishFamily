@@ -29,7 +29,7 @@ public class ChatTextItemViewBinder extends BaseChatItemViewBinder<ChatTextItemV
     }
 
     @Override
-    protected void onBindContentViewholder(ChatTextViewHolder holder, EMMessage itme,int position) {
+    protected void onBindContentViewHolder(ChatTextViewHolder holder, EMMessage itme, int position) {
         EMTextMessageBody txtBody = (EMTextMessageBody) itme.getBody();
         holder.tv_item_chat_text.setText(txtBody.getMessage());
     }

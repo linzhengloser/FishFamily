@@ -31,7 +31,7 @@ public class ChatVoiceItemViewBinder extends BaseChatItemViewBinder<ChatVoiceIte
     }
 
     @Override
-    protected void onBindContentViewholder(ChatVoiceViewHolder holder, EMMessage itme, int position) {
+    protected void onBindContentViewHolder(ChatVoiceViewHolder holder, EMMessage itme, int position) {
         EMVoiceMessageBody voiceBody = (EMVoiceMessageBody) itme.getBody();
         if (itme.direct() == EMMessage.Direct.RECEIVE) {
             holder.tv_void_time.setTextColor(Color.parseColor("#999999"));

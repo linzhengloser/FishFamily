@@ -1,5 +1,8 @@
 package com.lz.fishfamily.module;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * <pre>
  *     author : linzheng
@@ -9,39 +12,19 @@ package com.lz.fishfamily.module;
  *     version: 1.0
  * </pre>
  */
-public class User {
+public class User implements Parcelable {
 
     /**
-     * UserInfo_ID : 5acea66c-8cbe-4a76-88a7-1efbedde4d85
-     * UserInfo_HeadImg : http://fweb.whmnx.com/Resource/PhotoFile/5a630735-d046-4986-b5c7-c396010107a6.jpg
-     * UserInfo_NickName : 大佬111
-     * UserInfo_Pwd : FCEA920F7412B5DA7BE0CF42B8C93759
-     * UserInfo_Mobile : 13477484198
-     * UserInfo_Sex : 1
-     * UserInfo_Money : 0
-     * UserInfo_Integer : 0
-     * UserInfo_CreateTime : 2017-09-10T17:14:01.167
-     * UserInfo_State : 0
-     * UserInfo_IsApp : 0
-     * UserInfo_Provice : 湖北省
-     * UserInfo_City : 武汉市
-     * UserInfo_Region : 东西湖区
-     * UserInfo_DetailAddress :
-     * UserInfo_Type : 1
-     * UserInfo_ParentID :
-     * UserInfo_IdentityCard :
-     * UserInfo_RealName :
-     * UserInfo_Level : 0
-     * UserInfo_FullAddress :
-     * UserInfo_TotalMoney : 0
-     * UserInfo_Describe : 大吉大利，今晚吃鸡。
-     * UserInfo_UUAccount : 13477484198
-     * UserInfo_UUID : 63170fd0-9608-11e7-bfe8-716c9560e219
-     * UserInfo_Labelling : 、
-     * Business_ID : null
-     * ShareCount : 0
-     * FansCount : 158
-     * FllowCount : 300
+     * UserInfo_ID : 5acea66c-8cbe-4a76-88a7-1efbedde4d85 UserInfo_HeadImg :
+     * http://fweb.whmnx.com/Resource/PhotoFile/5a630735-d046-4986-b5c7-c396010107a6.jpg
+     * UserInfo_NickName : 大佬111 UserInfo_Pwd : FCEA920F7412B5DA7BE0CF42B8C93759 UserInfo_Mobile :
+     * 13477484198 UserInfo_Sex : 1 UserInfo_Money : 0 UserInfo_Integer : 0 UserInfo_CreateTime :
+     * 2017-09-10T17:14:01.167 UserInfo_State : 0 UserInfo_IsApp : 0 UserInfo_Provice : 湖北省
+     * UserInfo_City : 武汉市 UserInfo_Region : 东西湖区 UserInfo_DetailAddress : UserInfo_Type : 1
+     * UserInfo_ParentID : UserInfo_IdentityCard : UserInfo_RealName : UserInfo_Level : 0
+     * UserInfo_FullAddress : UserInfo_TotalMoney : 0 UserInfo_Describe : 大吉大利，今晚吃鸡。
+     * UserInfo_UUAccount : 13477484198 UserInfo_UUID : 63170fd0-9608-11e7-bfe8-716c9560e219
+     * UserInfo_Labelling : 、 Business_ID : null ShareCount : 0 FansCount : 158 FllowCount : 300
      */
 
     private String UserInfo_ID;
@@ -70,7 +53,7 @@ public class User {
     private String UserInfo_UUAccount;
     private String UserInfo_UUID;
     private String UserInfo_Labelling;
-    private Object Business_ID;
+    private String Business_ID;
     private int ShareCount;
     private int FansCount;
     private int FllowCount;
@@ -287,7 +270,7 @@ public class User {
         return Business_ID;
     }
 
-    public void setBusiness_ID(Object Business_ID) {
+    public void setBusiness_ID(String Business_ID) {
         this.Business_ID = Business_ID;
     }
 
@@ -314,4 +297,92 @@ public class User {
     public void setFllowCount(int FllowCount) {
         this.FllowCount = FllowCount;
     }
+
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.UserInfo_ID);
+        dest.writeString(this.UserInfo_HeadImg);
+        dest.writeString(this.UserInfo_NickName);
+        dest.writeString(this.UserInfo_Pwd);
+        dest.writeString(this.UserInfo_Mobile);
+        dest.writeInt(this.UserInfo_Sex);
+        dest.writeInt(this.UserInfo_Money);
+        dest.writeInt(this.UserInfo_Integer);
+        dest.writeString(this.UserInfo_CreateTime);
+        dest.writeInt(this.UserInfo_State);
+        dest.writeInt(this.UserInfo_IsApp);
+        dest.writeString(this.UserInfo_Provice);
+        dest.writeString(this.UserInfo_City);
+        dest.writeString(this.UserInfo_Region);
+        dest.writeString(this.UserInfo_DetailAddress);
+        dest.writeInt(this.UserInfo_Type);
+        dest.writeString(this.UserInfo_ParentID);
+        dest.writeString(this.UserInfo_IdentityCard);
+        dest.writeString(this.UserInfo_RealName);
+        dest.writeInt(this.UserInfo_Level);
+        dest.writeString(this.UserInfo_FullAddress);
+        dest.writeInt(this.UserInfo_TotalMoney);
+        dest.writeString(this.UserInfo_Describe);
+        dest.writeString(this.UserInfo_UUAccount);
+        dest.writeString(this.UserInfo_UUID);
+        dest.writeString(this.UserInfo_Labelling);
+        dest.writeString(this.Business_ID);
+        dest.writeInt(this.ShareCount);
+        dest.writeInt(this.FansCount);
+        dest.writeInt(this.FllowCount);
+    }
+
+    public User() {
+    }
+
+    protected User(Parcel in) {
+        this.UserInfo_ID = in.readString();
+        this.UserInfo_HeadImg = in.readString();
+        this.UserInfo_NickName = in.readString();
+        this.UserInfo_Pwd = in.readString();
+        this.UserInfo_Mobile = in.readString();
+        this.UserInfo_Sex = in.readInt();
+        this.UserInfo_Money = in.readInt();
+        this.UserInfo_Integer = in.readInt();
+        this.UserInfo_CreateTime = in.readString();
+        this.UserInfo_State = in.readInt();
+        this.UserInfo_IsApp = in.readInt();
+        this.UserInfo_Provice = in.readString();
+        this.UserInfo_City = in.readString();
+        this.UserInfo_Region = in.readString();
+        this.UserInfo_DetailAddress = in.readString();
+        this.UserInfo_Type = in.readInt();
+        this.UserInfo_ParentID = in.readString();
+        this.UserInfo_IdentityCard = in.readString();
+        this.UserInfo_RealName = in.readString();
+        this.UserInfo_Level = in.readInt();
+        this.UserInfo_FullAddress = in.readString();
+        this.UserInfo_TotalMoney = in.readInt();
+        this.UserInfo_Describe = in.readString();
+        this.UserInfo_UUAccount = in.readString();
+        this.UserInfo_UUID = in.readString();
+        this.UserInfo_Labelling = in.readString();
+        this.Business_ID = in.readString();
+        this.ShareCount = in.readInt();
+        this.FansCount = in.readInt();
+        this.FllowCount = in.readInt();
+    }
+
+    public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>() {
+        @Override
+        public User createFromParcel(Parcel source) {
+            return new User(source);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
 }

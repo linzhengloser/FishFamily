@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import com.lz.fishfamily.R
 import com.lz.library.utils.ToastUtils
+import java.text.SimpleDateFormat
 
 /**
  * <pre>
@@ -44,6 +45,11 @@ object Utils {
             return it
         }
     }
+
+    /**
+     * 解析时间
+     */
+    inline fun parseDate(dateStr: String,destFormat:String): String =SimpleDateFormat(destFormat).format(SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss").parse(dateStr))
 
     /**
      * true visible false gone

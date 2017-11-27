@@ -5,8 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.lz.fishfamily.R
 import com.lz.fishfamily.module.main.LikeList
+import com.lz.fishfamily.setLikeList
 import com.lz.library.base.BaseViewHolder
-import kotlinx.android.synthetic.main.item_main_post_like_avatar.view.*
+import kotlinx.android.synthetic.main.item_main_commodity_detail.view.*
 import me.drakeet.multitype.ItemViewBinder
 
 /**
@@ -20,17 +21,10 @@ import me.drakeet.multitype.ItemViewBinder
  */
 class LikeAvatarItemViewBinder : ItemViewBinder<LikeList, LikeAvatarItemViewBinder.PostLikeAvatarViewHolder>() {
 
+    override fun onCreateViewHolder(inflater: LayoutInflater, parent: ViewGroup): PostLikeAvatarViewHolder =
+            PostLikeAvatarViewHolder(inflater.inflate(R.layout.item_main_post_like_avatar, parent, false))
 
-    override fun onCreateViewHolder(inflater: LayoutInflater, parent: ViewGroup): PostLikeAvatarViewHolder {
-        return PostLikeAvatarViewHolder(inflater.inflate(R.layout.item_main_post_like_avatar, parent, false))
-    }
-
-    override fun onBindViewHolder(holder: PostLikeAvatarViewHolder, item: LikeList) {
-        repeat(holder.itemView.ll_like_layout.childCount) {
-            if (it < item.likeList.size - 1)
-                holder.itemView.ll_like_layout.getChildAt(it).visibility = View.VISIBLE
-        }
-    }
+    override fun onBindViewHolder(holder: PostLikeAvatarViewHolder, item: LikeList) = holder.itemView.ll_like_layout.setLikeList(item)
 
     class PostLikeAvatarViewHolder(itemView: View) : BaseViewHolder(itemView)
 

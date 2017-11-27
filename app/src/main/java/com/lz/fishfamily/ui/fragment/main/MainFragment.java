@@ -87,7 +87,7 @@ public class MainFragment extends LibraryBaseFragment {
         mFragmentList.add(LuckyFragment.newInstance());
         mFragmentList.add(TaotaoFragment.Companion.newInstance());
         mFragmentList.add(LiveFragment.newInstance());
-        mFragmentList.add(PublishFragment.newInstance());
+        mFragmentList.add(PublishFragment.Companion.newInstance());
         vp_main.setOffscreenPageLimit(mTitles.length);
         vp_main.setAdapter(new BaseViewPagerAdapter(getChildFragmentManager(), mFragmentList));
         ViewPagerHelper.bind(mi_main, vp_main);

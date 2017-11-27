@@ -77,7 +77,7 @@ public class UserManager {
     }
 
     public static void bindUserLevel(ImageView imageView, int level) {
-
+//        imageView.setImageResource(sUserLevelMap.get(level));
     }
 
 }

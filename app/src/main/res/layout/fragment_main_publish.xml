@@ -63,7 +63,7 @@
         </LinearLayout>
 
         <LinearLayout
-                android:id="@+id/ll_publish_commodity"
+                android:id="@+id/ll_merchant_living"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -140,7 +140,7 @@
                     android:gravity="center"
                     android:textSize="28px"
                     android:textColor="@color/black"
-                    android:text="丰富商圈内容"/>
+                    android:text="发布活体鱼"/>
 
         </LinearLayout>
 
@@ -191,7 +191,7 @@
                     android:gravity="center"
                     android:textSize="28px"
                     android:textColor="@color/black"
-                    android:text="手机鱼豆"/>
+                    android:text="收集鱼豆"/>
 
         </LinearLayout>
 

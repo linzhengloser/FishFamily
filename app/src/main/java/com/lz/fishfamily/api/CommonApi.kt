@@ -1,9 +1,8 @@
 package com.lz.fishfamily.api
 
+import com.lz.fishfamily.utils.UserManager
 import io.reactivex.Observable
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
+import retrofit2.http.*
 
 /**
  * <pre>
@@ -14,13 +13,37 @@ import retrofit2.http.POST
  * version: 1.0
 </pre> *
  */
-interface CommonApi{
+interface CommonApi {
 
     /**
      * 上传图片
      */
     @POST("Home/UpImg")
     @FormUrlEncoded
-    fun uploadImage(@Field("")imageBase64:String):Observable<Response<String>>
+    fun uploadImage(@Field("") imageBase64: String): Observable<Response<String>>
+
+
+    /**
+     * 点赞
+     */
+    @GET("UserInfo/UserLike")
+    fun postLike(
+            @Query("ForeignKey") targetId: String,
+            @Query("UserId") userId: String = UserManager.getUser().userInfo_ID
+    ): Observable<Response<String>>
+
+
+    /**
+     * 发表评论
+     */
+    @POST("UserInfo/UserComment")
+    @FormUrlEncoded
+    fun postComment(
+            @Field("Other_ID") targetId: String,
+            @Field("Comment_Content") comment: String,
+            @Field("CommentParent_ID") parentCommentId: String = "0",
+            @Field("PassiveUserInfo_ID") parentCommentUserId: String = "0",
+            @Field("UserInfo_ID") userId: String = UserManager.getUser().userInfo_ID
+    ): Observable<Response<String>>
 
 }

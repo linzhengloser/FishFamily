@@ -23,15 +23,15 @@ interface CommodityApi {
     @POST("Commodity/ApplyCommodity")
     @FormUrlEncoded
     fun publishCommodity(
-            @Field("Business_ID") shopId: String,
-            @Field("Price") commodityPrice: String,
-            @Field("Name") commodityName: String,
-            @Field("Freight") commodityFreight: String,
-            @Field("CommodityCategory_ID") commodityCategoryId: String,
-            @Field("Stock") commodityStock: String,
-            @Field("MainImgPath") commodityMainImgPath: String,
-            @Field("Conten") commodityContent: String,
-            @Field("img") commodityImg: String
+            @Field("Business_ID") shopId: String,//商铺ID
+            @Field("Price") commodityPrice: String,//价格
+            @Field("Name") commodityName: String,//商品名称
+            @Field("Freight") commodityFreight: String,//运费
+            @Field("CommodityCategory_ID") commodityCategoryId: String,//商品类型ID
+            @Field("Stock") commodityStock: String,//库存
+            @Field("MainImgPath") commodityMainImgPath: String,//主图
+            @Field("Conten") commodityContent: String,//内容
+            @Field("img") commodityImg: String//附图
     ): Observable<Response<String>>
 
 

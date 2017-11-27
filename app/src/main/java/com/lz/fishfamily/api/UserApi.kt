@@ -35,6 +35,9 @@ interface UserApi {
     fun getUserTagList(@Query("UserInfo_ID") userId: String): Observable<Response<Tag>>
 
 
+    /**
+     * 保存用户信息
+     */
     @POST("UserInfo/SaveUserInfo")
     @FormUrlEncoded
     fun saveUserInfo(
@@ -69,5 +72,6 @@ interface UserApi {
             @Query(Constant.PAGE_INDEX_KEY)pageIndex:Int = 1,
             @Query(Constant.SCREEN_CONDITION_KEY) screenCondition:String = Constant.DEFAULT_SCREEN_CONDITION
     ):Observable<Response<List<Fans>>>
+
 
 }

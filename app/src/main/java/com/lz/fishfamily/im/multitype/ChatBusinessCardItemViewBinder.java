@@ -24,7 +24,7 @@ public class ChatBusinessCardItemViewBinder extends BaseChatItemViewBinder<ChatB
     }
 
     @Override
-    protected void onBindContentViewholder(ChatBusinessCardViewHolder holder, EMMessage itme, int position) {
+    protected void onBindContentViewHolder(ChatBusinessCardViewHolder holder, EMMessage itme, int position) {
 
     }
 

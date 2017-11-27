@@ -23,10 +23,10 @@
                 android:gravity="center_vertical">
 
             <ImageView
+                    android:id="@+id/iv_avatar"
                     android:layout_width="80px"
                     android:layout_height="80px"
-                    app:layout_auto_basewidth="height"
-                    android:src="@drawable/default_avatar"/>
+                    app:layout_auto_basewidth="height"/>
 
             <LinearLayout
                     android:layout_width="match_parent"
@@ -41,18 +41,18 @@
                         android:gravity="center_vertical">
 
                     <TextView
+                            android:id="@+id/tv_nick_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="30px"
                             android:textColor="@color/black"
-                            android:text="大佬"
                             />
 
                     <ImageView
+                            android:id="@+id/iv_level"
                             android:layout_width="77px"
                             android:layout_height="32px"
-                            android:layout_marginLeft="15px"
-                            android:src="@drawable/mine_level_six"/>
+                            android:layout_marginLeft="15px"/>
 
                     <View
                             android:layout_width="0dp"
@@ -60,11 +60,11 @@
                             android:layout_weight="1"/>
 
                     <TextView
+                            android:id="@+id/tv_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="30px"
-                            android:textColor="#ff0000"
-                            android:text="¥2333.00"/>
+                            android:textColor="#ff0000"/>
 
                 </LinearLayout>
 
@@ -74,11 +74,11 @@
                         android:gravity="center_vertical">
 
                     <TextView
+                            android:id="@+id/tv_comment_number"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="24px"
-                            android:textColor="#999999"
-                            android:text="共2333条评论，2333人点赞"/>
+                            android:textColor="#999999"/>
 
                     <View
                             android:layout_width="0dp"
@@ -87,11 +87,11 @@
                             />
 
                     <TextView
+                            android:id="@+id/tv_repertory"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="24px"
-                            android:textColor="#999999"
-                            android:text="剩5件"/>
+                            android:textColor="#999999"/>
 
                 </LinearLayout>
 
@@ -102,19 +102,19 @@
 
 
         <TextView
+                android:id="@+id/tv_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24px"
                 android:textSize="30px"
-                android:textColor="@color/black"
-                android:text="我要卖二手鱼竿，钓到过鲤鱼王。"/>
+                android:textColor="@color/black"/>
 
 
         <TextView
+                android:id="@+id/tv_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"
-                android:text="贼厉害的鱼竿，几乎百发百中，钓到过传说中的鲤鱼王。"/>
+                android:layout_marginTop="10px"/>
 
 
         <ImageView
@@ -145,12 +145,12 @@
                     />
 
             <TextView
+                    android:id="@+id/tv_address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10px"
                     android:textSize="26px"
-                    android:textColor="#999999"
-                    android:text="湖北省·武汉市东西湖区"/>
+                    android:textColor="#999999"/>
 
             <View
                     android:layout_width="0dp"
@@ -158,11 +158,11 @@
                     android:layout_weight="1"/>
 
             <TextView
+                    android:id="@+id/tv_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="26px"
-                    android:textColor="#999999"
-                    android:text="07-17  12:12"/>
+                    android:textColor="#999999"/>
 
         </LinearLayout>
 
@@ -172,21 +172,12 @@
 
     <View
             android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="#cccccc"/>
-
-    <View
-            android:layout_width="match_parent"
             android:layout_height="20px"
             android:background="#eeeeee"/>
 
-    <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="#cccccc"/>
-
 
     <LinearLayout
+            android:id="@+id/ll_like_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingRight="30px"
@@ -195,56 +186,77 @@
             android:paddingBottom="16px"
             android:gravity="center_vertical"
             android:orientation="horizontal">
-        
-        
-        <ImageView
-                android:layout_width="44px"
-                android:layout_height="44px"
-                app:layout_auto_baseheight="width"
-                android:layout_marginRight="4px"
-                android:src="@drawable/default_avatar"/>
+
 
         <ImageView
                 android:layout_width="44px"
                 android:layout_height="44px"
                 app:layout_auto_baseheight="width"
                 android:layout_marginRight="4px"
-                android:src="@drawable/default_avatar"/>
+                android:visibility="gone"/>
 
         <ImageView
                 android:layout_width="44px"
                 android:layout_height="44px"
                 app:layout_auto_baseheight="width"
                 android:layout_marginRight="4px"
-                android:src="@drawable/default_avatar"/>
+                android:visibility="gone"/>
 
         <ImageView
                 android:layout_width="44px"
                 android:layout_height="44px"
                 app:layout_auto_baseheight="width"
                 android:layout_marginRight="4px"
-                android:src="@drawable/default_avatar"/>
+                android:visibility="gone"/>
 
         <ImageView
                 android:layout_width="44px"
                 android:layout_height="44px"
                 app:layout_auto_baseheight="width"
                 android:layout_marginRight="4px"
-                android:src="@drawable/default_avatar"/>
+                android:visibility="gone"/>
+
+        <ImageView
+                android:layout_width="44px"
+                android:layout_height="44px"
+                app:layout_auto_baseheight="width"
+                android:layout_marginRight="4px"
+                android:visibility="gone"/>
 
         <ImageView
                 android:layout_width="44px"
                 android:layout_height="44px"
                 app:layout_auto_baseheight="width"
                 android:layout_marginRight="10px"
-                android:src="@drawable/default_avatar"/>
+                android:visibility="gone"/>
 
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2333人点过赞"
-                android:textSize="26px"
-                android:textColor="@color/colorPrimary"/>
+        <ImageView
+                android:layout_width="44px"
+                android:layout_height="44px"
+                app:layout_auto_baseheight="width"
+                android:layout_marginRight="10px"
+                android:visibility="gone"/>
+
+        <ImageView
+                android:layout_width="44px"
+                android:layout_height="44px"
+                app:layout_auto_baseheight="width"
+                android:layout_marginRight="10px"
+                android:visibility="gone"/>
+
+        <ImageView
+                android:layout_width="44px"
+                android:layout_height="44px"
+                app:layout_auto_baseheight="width"
+                android:layout_marginRight="10px"
+                android:visibility="gone"/>
+
+        <ImageView
+                android:layout_width="44px"
+                android:layout_height="44px"
+                app:layout_auto_baseheight="width"
+                android:layout_marginRight="10px"
+                android:visibility="gone"/>
 
         <View
                 android:layout_width="0dp"
@@ -253,34 +265,26 @@
                 />
 
         <TextView
+                android:id="@+id/tv_like_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#999999"
+                android:drawablePadding="5dp"
                 android:textSize="26px"
-                android:text="2333人浏览过"/>
-        
-    </LinearLayout>
+                android:textColor="#999999"/>
 
-    <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="#cccccc"/>
+
+    </LinearLayout>
 
     <View
             android:layout_width="match_parent"
             android:layout_height="20px"
             android:background="#eeeeee"/>
 
-    <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="#cccccc"/>
-
     <TextView
+            android:id="@+id/tv_new_comment_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30px"
-            android:text="热门评论(2333)"
             android:textColor="@color/black"
             android:layout_marginTop="16px"
             android:textSize="26px"/>

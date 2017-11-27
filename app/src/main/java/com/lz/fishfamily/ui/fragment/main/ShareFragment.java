@@ -7,13 +7,13 @@ import android.support.v7.widget.RecyclerView;
 import com.lz.fishfamily.R;
 import com.lz.fishfamily.module.main.Comment;
 import com.lz.fishfamily.module.main.LikeList;
-import com.lz.fishfamily.module.main.PostDivider;
+import com.lz.fishfamily.module.main.MainDivider;
 import com.lz.fishfamily.module.mine.Post;
 import com.lz.fishfamily.ui.base.BaseListFragment;
 import com.lz.fishfamily.ui.multitype.main.CommentItemViewBinder;
 import com.lz.fishfamily.ui.multitype.main.CommonSearchItemViewBinder;
 import com.lz.fishfamily.ui.multitype.main.LikeAvatarItemViewBinder;
-import com.lz.fishfamily.ui.multitype.main.post.PostDividerItemViewBinder;
+import com.lz.fishfamily.ui.multitype.main.MainDividerItemViewBinder;
 import com.lz.fishfamily.ui.multitype.main.post.PostItemViewBinder;
 
 import butterknife.BindView;
@@ -37,7 +37,7 @@ public class ShareFragment extends BaseListFragment {
         getMAdapter().register(Post.class, new PostItemViewBinder());
         getMAdapter().register(String.class, new CommonSearchItemViewBinder());
         getMAdapter().register(LikeList.class, new LikeAvatarItemViewBinder());
-        getMAdapter().register(PostDivider.class, new PostDividerItemViewBinder());
+        getMAdapter().register(MainDivider.class, new MainDividerItemViewBinder());
         getMAdapter().register(Comment.class, new CommentItemViewBinder());
     }
 
@@ -49,9 +49,9 @@ public class ShareFragment extends BaseListFragment {
 
         for (int i = 0; i < 10; i++) {
             getMItems().add(new Post());
-            getMItems().add(new PostDivider());
+            getMItems().add(new MainDivider());
             getMItems().add(new Post());
-            getMItems().add(new PostDivider().setShowMoreComent(true));
+            getMItems().add(new MainDivider().setShowMoreComment(true));
         }
 
         rv_main_share.setLayoutManager(new LinearLayoutManager(getContext()));

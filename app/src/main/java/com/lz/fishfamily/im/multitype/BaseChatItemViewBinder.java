@@ -36,7 +36,7 @@ public abstract class BaseChatItemViewBinder<VH extends BaseChatItemViewBinder.C
 
     protected abstract ChatContentViewHolder onCreateContentViewHolder(LayoutInflater inflater, ViewGroup parent);
 
-    protected abstract void onBindContentViewholder(VH holder, EMMessage itme, int position);
+    protected abstract void onBindContentViewHolder(VH holder, EMMessage itme, int position);
 
     @NonNull
     @Override
@@ -52,7 +52,7 @@ public abstract class BaseChatItemViewBinder<VH extends BaseChatItemViewBinder.C
         holder.fl_item_chat_receive_container.removeAllViews();
         holder.fl_item_chat_sent_container.removeAllViews();
 
-        onBindContentViewholder((VH) holder.chatContentViewHolder, item, getPosition(holder));
+        onBindContentViewHolder((VH) holder.chatContentViewHolder, item, getPosition(holder));
 
         handleMessageAcked(item);
 

@@ -1,5 +1,8 @@
 package com.lz.fishfamily.module.main;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * <pre>
  *     author : linzheng
@@ -9,7 +12,7 @@ package com.lz.fishfamily.module.main;
  *     version: 1.0
  * </pre>
  */
-public class Like {
+public class Like implements Parcelable {
 
 
     /**
@@ -45,4 +48,38 @@ public class Like {
     public void setHeadImage(String HeadImage) {
         this.HeadImage = HeadImage;
     }
+
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.Other_ID);
+        dest.writeString(this.UserInfoID);
+        dest.writeString(this.HeadImage);
+    }
+
+    public Like() {
+    }
+
+    protected Like(Parcel in) {
+        this.Other_ID = in.readString();
+        this.UserInfoID = in.readString();
+        this.HeadImage = in.readString();
+    }
+
+    public static final Parcelable.Creator<Like> CREATOR = new Parcelable.Creator<Like>() {
+        @Override
+        public Like createFromParcel(Parcel source) {
+            return new Like(source);
+        }
+
+        @Override
+        public Like[] newArray(int size) {
+            return new Like[size];
+        }
+    };
 }
